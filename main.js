@@ -1268,6 +1268,8 @@ var SetupService = /** @class */ (function () {
         return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/user/auth", {
             "username": _AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].USERNAME,
             "password": _AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].PASSWORD
+        }, {
+            headers: { 'accept': '*/*' }
         }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (result) { return result.accessToken; }));
     };
     SetupService.prototype.createProject = function (accessToken) {
