@@ -40,8 +40,8 @@ var AppConfig = /** @class */ (function () {
         return this.METRIC_NAME_MAPPING.find(function (namePair) { return namePair.metricName === metricName; });
     };
     // CODERADAR SERVER CONFIG
-    AppConfig.BASE_URL = 'https://adesso-coderadar-dev01.test-server.ag';
-    //static BASE_URL = 'http://localhost:8080';
+    //static BASE_URL = 'https://adesso-coderadar-dev01.test-server.ag';
+    AppConfig.BASE_URL = 'http://localhost:8080';
     AppConfig.USERNAME = 'radar';
     AppConfig.PASSWORD = 'Password12!';
     AppConfig.TIME_FILTER_MAPPING = [
@@ -377,7 +377,7 @@ module.exports = ".choose-time-filter {\r\n  background: #213B4C;\r\n  border: s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"ICommitElements.length == commits.length-1\n              && IUserLeaderboardElements\n              && activeTimeFilterValue;\n            else loadingScreen\">\n  <div class=\"choose-time-filter\">\n    <input type=\"radio\" id=\"radio-today\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"86400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-today\" title=\"Heute\">24 Stunden</label>\n    <input type=\"radio\" id=\"radio-3-days\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"259200000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-3-days\" title=\"Diese Woche\">3 Tage</label>\n    <input type=\"radio\" id=\"radio-week\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"604800000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-week\" title=\"Diese Woche\">7 Tage</label>\n    <input type=\"radio\" id=\"radio-2-weeks\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"1209600000\" [(ngModel)]=\"activeTimeFilterValue\" />\n    <label class=\"custom-control-label\" for=\"radio-2-weeks\" title=\"Insgesamt\">2 Wochen</label>\n    <input type=\"radio\" id=\"radio-month\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"2629743000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-month\" title=\"Dieser Monat\">1 Monat</label>\n  </div>\n  <div class=\"board-container\">\n    <div class=\"leader-board-container\">\n      <leader-board\n        [commitElements]=\"ICommitElements\"\n        [userLeaderboardElements]=\"IUserLeaderboardElements\"\n        [activeFilter]=\"activeTimeFilterValue\">Loading...\n      </leader-board>\n    </div>\n    <div class=\"commit-feed-container\">\n      <commit-feed\n        [commitElements]=\"ICommitElements\"\n        [activeFilter]=\"activeTimeFilterValue\">Loading...\n      </commit-feed>\n    </div>\n  </div>\n</div>\n<ng-template #loadingScreen>\n  <loading-screen\n    [loadingIterator]=\"ICommitElements.length\"\n    [loadingElements]=\"commits.length-1\">\n  </loading-screen>\n</ng-template>\n\n"
+module.exports = "<div *ngIf=\"ICommitElements.length == commits.length-1\n              && IUserLeaderboardElements\n              && activeTimeFilterValue;\n            else loadingScreen\">\n  <div class=\"choose-time-filter\">\n    <input type=\"radio\" id=\"radio-today\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"86400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-today\" title=\"Heute\">24 Stunden</label>\n    <input type=\"radio\" id=\"radio-3-days\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"259200000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-3-days\" title=\"Diese Woche\">3 Tage</label>\n    <input type=\"radio\" id=\"radio-week\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"604800000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-week\" title=\"Diese Woche\">7 Tage</label>\n    <input type=\"radio\" id=\"radio-2-weeks\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"1209600000\" [(ngModel)]=\"activeTimeFilterValue\" />\n    <label class=\"custom-control-label\" for=\"radio-2-weeks\" title=\"Insgesamt\">2 Wochen</label>\n    <input type=\"radio\" id=\"radio-month\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"2629743000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-month\" title=\"Dieser Monat\">1 Monat</label>\n  </div>\n</div>\n<div class=\"board-container\" *ngIf=\"ICommitElements.length > 1\n                                      && IUserLeaderboardElements\n                                      && activeTimeFilterValue\">\n  <div class=\"leader-board-container\">\n    <leader-board\n      [commitElements]=\"ICommitElements\"\n      [userLeaderboardElements]=\"IUserLeaderboardElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </leader-board>\n  </div>\n  <div class=\"commit-feed-container\">\n    <commit-feed\n      [commitElements]=\"ICommitElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </commit-feed>\n  </div>\n</div>\n\n<ng-template #loadingScreen>\n  <loading-screen\n    [loadingIterator]=\"ICommitElements.length\"\n    [loadingElements]=\"commits.length-1\">\n  </loading-screen>\n</ng-template>\n\n"
 
 /***/ }),
 
@@ -393,7 +393,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BoardViewComponent", function() { return BoardViewComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _service_metric_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../service/metric.service */ "./src/app/service/metric.service.ts");
-/* harmony import */ var _AppConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../AppConfig */ "./src/app/AppConfig.ts");
+/* harmony import */ var _service_setup_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../service/setup.service */ "./src/app/service/setup.service.ts");
+/* harmony import */ var _AppConfig__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../AppConfig */ "./src/app/AppConfig.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -406,77 +407,82 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var BoardViewComponent = /** @class */ (function () {
-    function BoardViewComponent(metricService) {
+    function BoardViewComponent(metricService, setupService) {
         this.metricService = metricService;
+        this.setupService = setupService;
     }
     BoardViewComponent.prototype.ngOnInit = function () {
         var _this = this;
         console.log(this.commits);
         console.log(this.availableMetrics);
-        console.log(Date.now() - 15778458000);
+        console.log(Date.now() - 2629743000);
         this.commits.filter(function (ICommit) { return ICommit.timestamp > (Date.now() - 15778458000); });
         console.log(this.commits);
-        this.activeTimeFilterValue = 15778458000;
+        this.activeTimeFilterValue = 86400000;
         this.ICommitElements = [];
         this.IUserLeaderboardElements = [];
         this.authors = Array.from(new Set(this.commits.map(function (commit) { return commit.author; })));
         this.metricNames = this.availableMetrics.map(function (metric) { return metric.metricName; });
-        var totalUserPoints = 0;
-        for (var k = 0; k < this.authors.length; k++) {
-            var authorName = this.authors[k];
-            var totalUserHighscore = 0;
-            var bestCommitName = this.commits[0].name;
-            var bestCommitDate = new Date(this.commits[0].timestamp).toLocaleDateString();
-            var singleUserHighscore = 0;
-            this.IUserLeaderboardElements.push({
-                user: authorName,
-                totalUserPoints: totalUserHighscore,
-                bestCommitName: bestCommitName,
-                bestCommitDate: bestCommitDate,
-                bestCommitPoints: singleUserHighscore,
-            });
-        }
-        var _loop_1 = function () {
-            var deltaTree;
-            var tableRows = [];
-            var totalCommitPoints = 0;
-            var currentCommit = this_1.commits[i];
-            //console.log(currentCommit);
-            var previousCommit = this_1.commits[i + 1];
-            //console.log(previousCommit);
-            var commitDate = new Date(currentCommit.timestamp).toLocaleDateString();
-            var currentUserKey = this_1.IUserLeaderboardElements.findIndex(function (i) { return i.user === currentCommit.author; });
-            //console.log("------------------------------");
-            this_1.metricService.loadDeltaTree(previousCommit, currentCommit, this_1.metricNames).subscribe(function (node) {
-                deltaTree = node;
-                //console.log(deltaTree);
-                tableRows = _this.prepareTableData(deltaTree);
-                for (var j = 0; j < tableRows.length; j++) {
-                    totalCommitPoints += tableRows[j].points;
-                }
-                _this.ICommitElements.push({
-                    currentCommit: currentCommit,
-                    previousCommit: previousCommit,
-                    date: commitDate,
-                    totalPoints: totalCommitPoints,
-                    tableRows: tableRows
+        this.setupService.authorizeUser().subscribe(function (loginResultAccessToken) {
+            console.log(loginResultAccessToken);
+            var totalUserPoints = 0;
+            for (var k = 0; k < _this.authors.length; k++) {
+                var authorName = _this.authors[k];
+                var totalUserHighscore = 0;
+                var bestCommitName = _this.commits[0].name;
+                var bestCommitDate = new Date(_this.commits[0].timestamp).toLocaleDateString();
+                var singleUserHighscore = 0;
+                _this.IUserLeaderboardElements.push({
+                    user: authorName,
+                    totalUserPoints: totalUserHighscore,
+                    bestCommitName: bestCommitName,
+                    bestCommitDate: bestCommitDate,
+                    bestCommitPoints: singleUserHighscore,
                 });
-                if (totalCommitPoints > _this.IUserLeaderboardElements[currentUserKey].bestCommitPoints) {
-                    _this.IUserLeaderboardElements[currentUserKey].bestCommitName = currentCommit.name;
-                    _this.IUserLeaderboardElements[currentUserKey].bestCommitDate = commitDate;
-                    _this.IUserLeaderboardElements[currentUserKey].bestCommitPoints = totalCommitPoints;
-                }
-                _this.IUserLeaderboardElements[currentUserKey].totalUserPoints += totalCommitPoints;
-                _this.ICommitElements.sort(function (a, b) { return b.currentCommit.timestamp - a.currentCommit.timestamp; });
-                _this.IUserLeaderboardElements.sort(function (a, b) { return b.totalUserPoints - a.totalUserPoints; });
-                //console.log(this.IUserLeaderboardElements);
-            });
-        };
-        var this_1 = this;
-        for (var i = 0; i < this.commits.length - 1; i++) {
-            _loop_1();
-        }
+            }
+            var _loop_1 = function () {
+                var deltaTree;
+                var tableRows = [];
+                var totalCommitPoints = 0;
+                var currentCommit = _this.commits[i];
+                //console.log("------------------------------");
+                //console.log(i);
+                //console.log(currentCommit);
+                var previousCommit = _this.commits[i + 1];
+                //console.log(previousCommit);
+                var commitDate = new Date(currentCommit.timestamp).toLocaleDateString();
+                var currentUserKey = _this.IUserLeaderboardElements.findIndex(function (i) { return i.user === currentCommit.author; });
+                _this.metricService.loadDeltaTree(loginResultAccessToken, previousCommit, currentCommit, _this.metricNames).subscribe(function (node) {
+                    deltaTree = node;
+                    console.log(deltaTree);
+                    tableRows = _this.prepareTableData(deltaTree);
+                    for (var j = 0; j < tableRows.length; j++) {
+                        totalCommitPoints += tableRows[j].points;
+                    }
+                    _this.ICommitElements.push({
+                        currentCommit: currentCommit,
+                        previousCommit: previousCommit,
+                        date: commitDate,
+                        totalPoints: totalCommitPoints,
+                        tableRows: tableRows
+                    });
+                    if (totalCommitPoints > _this.IUserLeaderboardElements[currentUserKey].bestCommitPoints) {
+                        _this.IUserLeaderboardElements[currentUserKey].bestCommitName = currentCommit.name;
+                        _this.IUserLeaderboardElements[currentUserKey].bestCommitDate = commitDate;
+                        _this.IUserLeaderboardElements[currentUserKey].bestCommitPoints = totalCommitPoints;
+                    }
+                    _this.IUserLeaderboardElements[currentUserKey].totalUserPoints += totalCommitPoints;
+                    _this.ICommitElements.sort(function (a, b) { return b.currentCommit.timestamp - a.currentCommit.timestamp; });
+                    _this.IUserLeaderboardElements.sort(function (a, b) { return b.totalUserPoints - a.totalUserPoints; });
+                    //console.log(this.IUserLeaderboardElements);
+                });
+            };
+            for (var i = 0; i < _this.commits.length - 1; i++) {
+                _loop_1();
+            }
+        });
     };
     BoardViewComponent.prototype.prepareTableData = function (foundElement) {
         var rows = [];
@@ -504,7 +510,7 @@ var BoardViewComponent = /** @class */ (function () {
                 points = 10 * difference;
                 //console.log("Points: " + points);
                 rows.push({
-                    metricName: _AppConfig__WEBPACK_IMPORTED_MODULE_2__["AppConfig"].getShortNameByMetricName(metricName).shortName,
+                    metricName: _AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].getShortNameByMetricName(metricName).shortName,
                     currentCommitValue: currentCommitValue || 'N/A',
                     previousCommitValue: previousCommitValue || 'N/A',
                     difference: difference,
@@ -528,7 +534,7 @@ var BoardViewComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./board-view.component.html */ "./src/app/components/board-view/board-view.component.html"),
             styles: [__webpack_require__(/*! ./board-view.component.css */ "./src/app/components/board-view/board-view.component.css")]
         }),
-        __metadata("design:paramtypes", [_service_metric_service__WEBPACK_IMPORTED_MODULE_1__["MetricService"]])
+        __metadata("design:paramtypes", [_service_metric_service__WEBPACK_IMPORTED_MODULE_1__["MetricService"], _service_setup_service__WEBPACK_IMPORTED_MODULE_2__["SetupService"]])
     ], BoardViewComponent);
     return BoardViewComponent;
 }());
@@ -617,7 +623,7 @@ module.exports = "#commit-feed {\r\n  .display: block;\r\n  max-height: 80%;\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"commit-feed\">\n  <table *ngFor=\"let commitElement of formattedCommitElements\" class=\"commit-feed-element\" class=\"table table-striped table-sm\">\n    <thead>\n    <tr>\n      <th colspan=\"5\">{{commitElement.currentCommit.name}}</th>\n    </tr>\n    <tr>\n      <th colspan=\"2\"><fa-icon [icon]=\"faUser\"></fa-icon>{{commitElement.currentCommit.author}}</th>\n      <th colspan=\"3\"><fa-icon [icon]=\"faCalendarAlt\"></fa-icon>{{commitElement.date}}</th>\n    </tr>\n    </thead>\n    <tr class=\"metric-table\" *ngIf=\"commitElement.tableRows!=0\">\n      <th>Veränderte Metriken</th>\n      <th id=\"second-commit-id\">Vorher</th>\n      <th id=\"first-commit-id\">Nachher</th>\n      <th>Änderung</th>\n      <th>Punkte</th>\n    </tr>\n    <tbody>\n    <tr *ngFor=\"let row of commitElement.tableRows\" class=\"commit-metric-data\">\n      <td>{{row.metricName}}</td>\n      <td>{{row.previousCommitValue}}</td>\n      <td>{{row.currentCommitValue}}</td>\n      <td>\n        <fa-icon *ngIf=\"row.difference < 0\" [icon]=\"faCaretUp\"></fa-icon>\n        <fa-icon *ngIf=\"row.difference > 0\" [icon]=\"faCaretDown\"></fa-icon>\n        {{row.difference}}\n      </td>\n      <td>{{row.points}}</td>\n    </tr>\n    <tr>\n      <td colspan=\"5\" class=\"commit-points\">\n        <fa-icon *ngIf=\"commitElement.totalPoints>0\"[icon]=\"faPlusSquare\"></fa-icon>\n        <fa-icon *ngIf=\"commitElement.totalPoints==0\"[icon]=\"faSquare\"></fa-icon>\n        {{commitElement.totalPoints}}\n        <fa-icon *ngIf=\"commitElement.totalPoints>0\"[icon]=\"faPlusSquare\"></fa-icon>\n        <fa-icon *ngIf=\"commitElement.totalPoints==0\"[icon]=\"faSquare\"></fa-icon>\n      </td>\n    </tr>\n    </tbody>\n  </table>\n</div>\n"
+module.exports = "<div id=\"commit-feed\">\n  <table *ngFor=\"let commitElement of commitElements\" class=\"commit-feed-element\" class=\"table table-striped table-sm\">\n    <thead>\n    <tr>\n      <th colspan=\"5\">{{commitElement.currentCommit.name}}</th>\n    </tr>\n    <tr>\n      <th colspan=\"2\"><fa-icon [icon]=\"faUser\"></fa-icon>{{commitElement.currentCommit.author}}</th>\n      <th colspan=\"3\"><fa-icon [icon]=\"faCalendarAlt\"></fa-icon>{{commitElement.date}}</th>\n    </tr>\n    </thead>\n    <tr class=\"metric-table\" *ngIf=\"commitElement.tableRows!=0\">\n      <th>Veränderte Metriken</th>\n      <th id=\"second-commit-id\">Vorher</th>\n      <th id=\"first-commit-id\">Nachher</th>\n      <th>Änderung</th>\n      <th>Punkte</th>\n    </tr>\n    <tbody>\n    <tr *ngFor=\"let row of commitElement.tableRows\" class=\"commit-metric-data\">\n      <td>{{row.metricName}}</td>\n      <td>{{row.previousCommitValue}}</td>\n      <td>{{row.currentCommitValue}}</td>\n      <td>\n        <fa-icon *ngIf=\"row.difference < 0\" [icon]=\"faCaretUp\"></fa-icon>\n        <fa-icon *ngIf=\"row.difference > 0\" [icon]=\"faCaretDown\"></fa-icon>\n        {{row.difference}}\n      </td>\n      <td>{{row.points}}</td>\n    </tr>\n    <tr>\n      <td colspan=\"5\" class=\"commit-points\">\n        <fa-icon *ngIf=\"commitElement.totalPoints>0\"[icon]=\"faPlusSquare\"></fa-icon>\n        <fa-icon *ngIf=\"commitElement.totalPoints==0\"[icon]=\"faSquare\"></fa-icon>\n        {{commitElement.totalPoints}}\n        <fa-icon *ngIf=\"commitElement.totalPoints>0\"[icon]=\"faPlusSquare\"></fa-icon>\n        <fa-icon *ngIf=\"commitElement.totalPoints==0\"[icon]=\"faSquare\"></fa-icon>\n      </td>\n    </tr>\n    </tbody>\n  </table>\n</div>\n"
 
 /***/ }),
 
@@ -658,8 +664,7 @@ var CommitFeedComponent = /** @class */ (function () {
     }
     CommitFeedComponent.prototype.ngOnChanges = function () {
         var _this = this;
-        this.commitElements.sort(function (a, b) { return b.currentCommit.timestamp - a.currentCommit.timestamp; });
-        this.formattedCommitElements = this.commitElements.filter(function (commitElement) { return commitElement.currentCommit.timestamp > Date.now() - _this.activeFilter; });
+        this.commitElements.sort(function (a, b) { return b.currentCommit.timestamp - a.currentCommit.timestamp; }).filter(function (commitElement) { return commitElement.currentCommit.timestamp > Date.now() - _this.activeFilter; });
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -748,7 +753,9 @@ var LeaderBoardComponent = /** @class */ (function () {
         console.log(this.commitElements);
         this.formattedUserElements = this.userLeaderboardElements.sort(function (a, b) { return b.totalUserPoints - a.totalUserPoints; });
         for (var i = 0; i < 10; i++) {
-            this.formattedCommitElements.push(this.commitElements[i]);
+            if (this.commitElements[i]) {
+                this.formattedCommitElements.push(this.commitElements[i]);
+            }
         }
     };
     __decorate([
@@ -837,18 +844,20 @@ var GeneralViewComponent = /** @class */ (function () {
     }
     GeneralViewComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.serverSetUp = false;
-        this.setupService.setupServer();
+        this.serverSetUp = this.setupService.setupServer();
+        this.expAccessToken = this.setupService.authorizeUser();
         if (this.serverSetUp) {
-            this.commitService.loadCommits().subscribe(function (commits) {
-                commits
-                    .filter(function (ICommit) { return ICommit.timestamp > (Date.now() - 15778458000); })
-                    .filter(function (ICommit) { return ICommit.analyzed == true; })
-                    .sort(function (a, b) { return b.timestamp - a.timestamp; });
-                _this.commits = commits;
+            this.setupService.authorizeUser().subscribe(function (loginResultAccessToken) {
+                _this.commitService.loadCommits(loginResultAccessToken).subscribe(function (commits) {
+                    commits
+                        .filter(function (ICommit) { return ICommit.timestamp > (Date.now() - 2629743000); })
+                        .filter(function (ICommit) { return ICommit.analyzed == true; })
+                        .sort(function (a, b) { return b.timestamp - a.timestamp; });
+                    _this.commits = commits;
+                });
+                _this.appMetrics = Array.from(new Set(_AppConfig__WEBPACK_IMPORTED_MODULE_4__["AppConfig"].METRIC_NAME_MAPPING));
+                //this.metricService.loadAvailableMetrics().subscribe(metrics => this.availableMetrics = metrics);
             });
-            this.appMetrics = Array.from(new Set(_AppConfig__WEBPACK_IMPORTED_MODULE_4__["AppConfig"].METRIC_NAME_MAPPING));
-            //this.metricService.loadAvailableMetrics().subscribe(metrics => this.availableMetrics = metrics);
         }
     };
     GeneralViewComponent = __decorate([
@@ -992,7 +1001,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"preloader\">\n  <div *ngIf=\"loadingIterator && loadingElements; else ladeAllgemein\">\n    {{loadingIterator}} von {{loadingElements}} werden ausgewertet...\n  </div>\n  <ng-template #ladeAllgemein><div>Commits werden geladen...</div></ng-template>\n  <span class=\"line line-1\"></span>\n  <span class=\"line line-2\"></span>\n  <span class=\"line line-3\"></span>\n  <span class=\"line line-4\"></span>\n  <span class=\"line line-5\"></span>\n  <span class=\"line line-6\"></span>\n  <span class=\"line line-7\"></span>\n  <span class=\"line line-8\"></span>\n  <span class=\"line line-9\"></span>\n</div>\n"
+module.exports = "<div class=\"preloader\">\n  <div>\n    {{loadingIterator}} von {{loadingElements}} Commits ausgewertet...\n  </div>\n  <ng-template #ladeAllgemein><div>Commits werden geladen...</div></ng-template>\n  <span class=\"line line-1\"></span>\n  <span class=\"line line-2\"></span>\n  <span class=\"line line-3\"></span>\n  <span class=\"line line-4\"></span>\n  <span class=\"line line-5\"></span>\n  <span class=\"line line-6\"></span>\n  <span class=\"line line-7\"></span>\n  <span class=\"line line-8\"></span>\n  <span class=\"line line-9\"></span>\n</div>\n"
 
 /***/ }),
 
@@ -1003,7 +1012,7 @@ module.exports = "<div class=\"preloader\">\n  <div *ngIf=\"loadingIterator && l
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body {\n  background: #000; }\n\n.preloader {\n  margin: 100px auto 0;\n  height: 12px; }\n\ndiv {\n  color: #213B4C;\n  margin: 20px 0;\n  text-transform: uppercase;\n  text-align: center;\n  font-family: 'Arial', sans-serif;\n  font-size: 20px;\n  letter-spacing: 2px; }\n\n.preloader .line {\n  width: 1px;\n  height: 15px;\n  background: #213B4C;\n  margin: 0 1px;\n  display: inline-block;\n  -webkit-animation: opacity-1 1000ms infinite ease-in-out;\n          animation: opacity-1 1000ms infinite ease-in-out; }\n\n.preloader .line-1, .preloader-2 .line-1 {\n  -webkit-animation-delay: 800ms;\n          animation-delay: 800ms; }\n\n.preloader .line-2, .preloader-2 .line-2 {\n  -webkit-animation-delay: 600ms;\n          animation-delay: 600ms; }\n\n.preloader .line-3, .preloader-2 .line-3 {\n  -webkit-animation-delay: 400ms;\n          animation-delay: 400ms; }\n\n.preloader .line-4, .preloader-2 .line-4 {\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms; }\n\n.preloader .line-6, .preloader-2 .line-6 {\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms; }\n\n.preloader .line-7, .preloader-2 .line-7 {\n  -webkit-animation-delay: 400ms;\n          animation-delay: 400ms; }\n\n.preloader .line-8, .preloader-2 .line-8 {\n  -webkit-animation-delay: 600ms;\n          animation-delay: 600ms; }\n\n.preloader .line-9, .preloader-2 .line-9 {\n  -webkit-animation-delay: 800ms;\n          animation-delay: 800ms; }\n\n@-webkit-keyframes opacity-1 {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes opacity-1 {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes opacity-2 {\n  0% {\n    opacity: 1;\n    height: 15px; }\n  50% {\n    opacity: 0;\n    height: 12px; }\n  100% {\n    opacity: 1;\n    height: 15px; } }\n\n@keyframes opacity-2 {\n  0% {\n    opacity: 1;\n    height: 15px; }\n  50% {\n    opacity: 0;\n    height: 12px; }\n  100% {\n    opacity: 1;\n    height: 15px; } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zaGFyZWQtY29tcG9uZW50cy9sb2FkaW5nLXNjcmVlbi9DOlxcZGV2XFxiYWNoZWxvclxcdGVhbS1nYW1pZmljYXRpb24tYXBwL3NyY1xcYXBwXFxjb21wb25lbnRzXFxzaGFyZWQtY29tcG9uZW50c1xcbG9hZGluZy1zY3JlZW5cXGxvYWRpbmctc2NyZWVuLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWdCLEVBQ2pCOztBQUNEO0VBQ0UscUJBQW9CO0VBQ3BCLGFBQVksRUFDYjs7QUFHRDtFQUNFLGVBQWM7RUFDZCxlQUFjO0VBQ2QsMEJBQXlCO0VBQ3pCLG1CQUFrQjtFQUNsQixpQ0FBZ0M7RUFDaEMsZ0JBQWU7RUFDZixvQkFBbUIsRUFDcEI7O0FBRUQ7RUFDRSxXQUFVO0VBQ1YsYUFBWTtFQUNaLG9CQUFtQjtFQUNuQixjQUFhO0VBQ2Isc0JBQXFCO0VBQ3JCLHlEQUFnRDtVQUFoRCxpREFBZ0QsRUFDakQ7O0FBRUQ7RUFBMkMsK0JBQXNCO1VBQXRCLHVCQUFzQixFQUFJOztBQUNyRTtFQUEyQywrQkFBc0I7VUFBdEIsdUJBQXNCLEVBQUk7O0FBQ3JFO0VBQTJDLCtCQUFzQjtVQUF0Qix1QkFBc0IsRUFBSTs7QUFDckU7RUFBMkMsK0JBQXNCO1VBQXRCLHVCQUFzQixFQUFJOztBQUNyRTtFQUEyQywrQkFBc0I7VUFBdEIsdUJBQXNCLEVBQUk7O0FBQ3JFO0VBQTJDLCtCQUFzQjtVQUF0Qix1QkFBc0IsRUFBSTs7QUFDckU7RUFBMkMsK0JBQXNCO1VBQXRCLHVCQUFzQixFQUFJOztBQUNyRTtFQUEyQywrQkFBc0I7VUFBdEIsdUJBQXNCLEVBQUk7O0FBRXJFO0VBQ0U7SUFDRSxXQUFVLEVBQUE7RUFFWjtJQUNFLFdBQVUsRUFBQTtFQUVaO0lBQ0UsV0FBVSxFQUFBLEVBQUE7O0FBUmQ7RUFDRTtJQUNFLFdBQVUsRUFBQTtFQUVaO0lBQ0UsV0FBVSxFQUFBO0VBRVo7SUFDRSxXQUFVLEVBQUEsRUFBQTs7QUFJZDtFQUNFO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQTtFQUVkO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQTtFQUVkO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQSxFQUFBOztBQVhoQjtFQUNFO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQTtFQUVkO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQTtFQUVkO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9zaGFyZWQtY29tcG9uZW50cy9sb2FkaW5nLXNjcmVlbi9sb2FkaW5nLXNjcmVlbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xyXG4gIGJhY2tncm91bmQ6ICMwMDA7XHJcbn1cclxuLnByZWxvYWRlcntcclxuICBtYXJnaW46IDEwMHB4IGF1dG8gMDtcclxuICBoZWlnaHQ6IDEycHg7XHJcbn1cclxuXHJcblxyXG5kaXYge1xyXG4gIGNvbG9yOiAjMjEzQjRDO1xyXG4gIG1hcmdpbjogMjBweCAwO1xyXG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGZvbnQtZmFtaWx5OiAnQXJpYWwnLCBzYW5zLXNlcmlmO1xyXG4gIGZvbnQtc2l6ZTogMjBweDtcclxuICBsZXR0ZXItc3BhY2luZzogMnB4O1xyXG59XHJcblxyXG4ucHJlbG9hZGVyIC5saW5lIHtcclxuICB3aWR0aDogMXB4O1xyXG4gIGhlaWdodDogMTVweDtcclxuICBiYWNrZ3JvdW5kOiAjMjEzQjRDO1xyXG4gIG1hcmdpbjogMCAxcHg7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIGFuaW1hdGlvbjogb3BhY2l0eS0xIDEwMDBtcyBpbmZpbml0ZSBlYXNlLWluLW91dDtcclxufVxyXG5cclxuLnByZWxvYWRlciAubGluZS0xLCAucHJlbG9hZGVyLTIgLmxpbmUtMSB7IGFuaW1hdGlvbi1kZWxheTogODAwbXM7IH1cclxuLnByZWxvYWRlciAubGluZS0yLCAucHJlbG9hZGVyLTIgLmxpbmUtMiB7IGFuaW1hdGlvbi1kZWxheTogNjAwbXM7IH1cclxuLnByZWxvYWRlciAubGluZS0zLCAucHJlbG9hZGVyLTIgLmxpbmUtMyB7IGFuaW1hdGlvbi1kZWxheTogNDAwbXM7IH1cclxuLnByZWxvYWRlciAubGluZS00LCAucHJlbG9hZGVyLTIgLmxpbmUtNCB7IGFuaW1hdGlvbi1kZWxheTogMjAwbXM7IH1cclxuLnByZWxvYWRlciAubGluZS02LCAucHJlbG9hZGVyLTIgLmxpbmUtNiB7IGFuaW1hdGlvbi1kZWxheTogMjAwbXM7IH1cclxuLnByZWxvYWRlciAubGluZS03LCAucHJlbG9hZGVyLTIgLmxpbmUtNyB7IGFuaW1hdGlvbi1kZWxheTogNDAwbXM7IH1cclxuLnByZWxvYWRlciAubGluZS04LCAucHJlbG9hZGVyLTIgLmxpbmUtOCB7IGFuaW1hdGlvbi1kZWxheTogNjAwbXM7IH1cclxuLnByZWxvYWRlciAubGluZS05LCAucHJlbG9hZGVyLTIgLmxpbmUtOSB7IGFuaW1hdGlvbi1kZWxheTogODAwbXM7IH1cclxuXHJcbkBrZXlmcmFtZXMgb3BhY2l0eS0xIHtcclxuICAwJSB7XHJcbiAgICBvcGFjaXR5OiAxO1xyXG4gIH1cclxuICA1MCUge1xyXG4gICAgb3BhY2l0eTogMDtcclxuICB9XHJcbiAgMTAwJSB7XHJcbiAgICBvcGFjaXR5OiAxO1xyXG4gIH1cclxufVxyXG5cclxuQGtleWZyYW1lcyBvcGFjaXR5LTIge1xyXG4gIDAlIHtcclxuICAgIG9wYWNpdHk6IDE7XHJcbiAgICBoZWlnaHQ6IDE1cHg7XHJcbiAgfVxyXG4gIDUwJSB7XHJcbiAgICBvcGFjaXR5OiAwO1xyXG4gICAgaGVpZ2h0OiAxMnB4O1xyXG4gIH1cclxuICAxMDAlIHtcclxuICAgIG9wYWNpdHk6IDE7XHJcbiAgICBoZWlnaHQ6IDE1cHg7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
+module.exports = "body {\n  background: #000; }\n\n.preloader {\n  padding: 0px 0px 40px 0px;\n  height: 12px; }\n\ndiv {\n  color: #213B4C;\n  margin: 20px 0;\n  text-transform: uppercase;\n  text-align: center;\n  font-family: 'Arial', sans-serif;\n  font-size: 20px;\n  letter-spacing: 2px; }\n\n.preloader .line {\n  width: 1px;\n  height: 15px;\n  background: #213B4C;\n  margin: 0 1px;\n  display: inline-block;\n  -webkit-animation: opacity-1 1000ms infinite ease-in-out;\n          animation: opacity-1 1000ms infinite ease-in-out; }\n\n.preloader .line-1, .preloader-2 .line-1 {\n  -webkit-animation-delay: 800ms;\n          animation-delay: 800ms; }\n\n.preloader .line-2, .preloader-2 .line-2 {\n  -webkit-animation-delay: 600ms;\n          animation-delay: 600ms; }\n\n.preloader .line-3, .preloader-2 .line-3 {\n  -webkit-animation-delay: 400ms;\n          animation-delay: 400ms; }\n\n.preloader .line-4, .preloader-2 .line-4 {\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms; }\n\n.preloader .line-6, .preloader-2 .line-6 {\n  -webkit-animation-delay: 200ms;\n          animation-delay: 200ms; }\n\n.preloader .line-7, .preloader-2 .line-7 {\n  -webkit-animation-delay: 400ms;\n          animation-delay: 400ms; }\n\n.preloader .line-8, .preloader-2 .line-8 {\n  -webkit-animation-delay: 600ms;\n          animation-delay: 600ms; }\n\n.preloader .line-9, .preloader-2 .line-9 {\n  -webkit-animation-delay: 800ms;\n          animation-delay: 800ms; }\n\n@-webkit-keyframes opacity-1 {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes opacity-1 {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@-webkit-keyframes opacity-2 {\n  0% {\n    opacity: 1;\n    height: 15px; }\n  50% {\n    opacity: 0;\n    height: 12px; }\n  100% {\n    opacity: 1;\n    height: 15px; } }\n\n@keyframes opacity-2 {\n  0% {\n    opacity: 1;\n    height: 15px; }\n  50% {\n    opacity: 0;\n    height: 12px; }\n  100% {\n    opacity: 1;\n    height: 15px; } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zaGFyZWQtY29tcG9uZW50cy9sb2FkaW5nLXNjcmVlbi9DOlxcZGV2XFxiYWNoZWxvclxcdGVhbS1nYW1pZmljYXRpb24tYXBwL3NyY1xcYXBwXFxjb21wb25lbnRzXFxzaGFyZWQtY29tcG9uZW50c1xcbG9hZGluZy1zY3JlZW5cXGxvYWRpbmctc2NyZWVuLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWdCLEVBQ2pCOztBQUNEO0VBQ0UsMEJBQXlCO0VBQ3pCLGFBQVksRUFDYjs7QUFHRDtFQUNFLGVBQWM7RUFDZCxlQUFjO0VBQ2QsMEJBQXlCO0VBQ3pCLG1CQUFrQjtFQUNsQixpQ0FBZ0M7RUFDaEMsZ0JBQWU7RUFDZixvQkFBbUIsRUFDcEI7O0FBRUQ7RUFDRSxXQUFVO0VBQ1YsYUFBWTtFQUNaLG9CQUFtQjtFQUNuQixjQUFhO0VBQ2Isc0JBQXFCO0VBQ3JCLHlEQUFnRDtVQUFoRCxpREFBZ0QsRUFDakQ7O0FBRUQ7RUFBMkMsK0JBQXNCO1VBQXRCLHVCQUFzQixFQUFJOztBQUNyRTtFQUEyQywrQkFBc0I7VUFBdEIsdUJBQXNCLEVBQUk7O0FBQ3JFO0VBQTJDLCtCQUFzQjtVQUF0Qix1QkFBc0IsRUFBSTs7QUFDckU7RUFBMkMsK0JBQXNCO1VBQXRCLHVCQUFzQixFQUFJOztBQUNyRTtFQUEyQywrQkFBc0I7VUFBdEIsdUJBQXNCLEVBQUk7O0FBQ3JFO0VBQTJDLCtCQUFzQjtVQUF0Qix1QkFBc0IsRUFBSTs7QUFDckU7RUFBMkMsK0JBQXNCO1VBQXRCLHVCQUFzQixFQUFJOztBQUNyRTtFQUEyQywrQkFBc0I7VUFBdEIsdUJBQXNCLEVBQUk7O0FBRXJFO0VBQ0U7SUFDRSxXQUFVLEVBQUE7RUFFWjtJQUNFLFdBQVUsRUFBQTtFQUVaO0lBQ0UsV0FBVSxFQUFBLEVBQUE7O0FBUmQ7RUFDRTtJQUNFLFdBQVUsRUFBQTtFQUVaO0lBQ0UsV0FBVSxFQUFBO0VBRVo7SUFDRSxXQUFVLEVBQUEsRUFBQTs7QUFJZDtFQUNFO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQTtFQUVkO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQTtFQUVkO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQSxFQUFBOztBQVhoQjtFQUNFO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQTtFQUVkO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQTtFQUVkO0lBQ0UsV0FBVTtJQUNWLGFBQVksRUFBQSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9zaGFyZWQtY29tcG9uZW50cy9sb2FkaW5nLXNjcmVlbi9sb2FkaW5nLXNjcmVlbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xyXG4gIGJhY2tncm91bmQ6ICMwMDA7XHJcbn1cclxuLnByZWxvYWRlcntcclxuICBwYWRkaW5nOiAwcHggMHB4IDQwcHggMHB4O1xyXG4gIGhlaWdodDogMTJweDtcclxufVxyXG5cclxuXHJcbmRpdiB7XHJcbiAgY29sb3I6ICMyMTNCNEM7XHJcbiAgbWFyZ2luOiAyMHB4IDA7XHJcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgZm9udC1mYW1pbHk6ICdBcmlhbCcsIHNhbnMtc2VyaWY7XHJcbiAgZm9udC1zaXplOiAyMHB4O1xyXG4gIGxldHRlci1zcGFjaW5nOiAycHg7XHJcbn1cclxuXHJcbi5wcmVsb2FkZXIgLmxpbmUge1xyXG4gIHdpZHRoOiAxcHg7XHJcbiAgaGVpZ2h0OiAxNXB4O1xyXG4gIGJhY2tncm91bmQ6ICMyMTNCNEM7XHJcbiAgbWFyZ2luOiAwIDFweDtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgYW5pbWF0aW9uOiBvcGFjaXR5LTEgMTAwMG1zIGluZmluaXRlIGVhc2UtaW4tb3V0O1xyXG59XHJcblxyXG4ucHJlbG9hZGVyIC5saW5lLTEsIC5wcmVsb2FkZXItMiAubGluZS0xIHsgYW5pbWF0aW9uLWRlbGF5OiA4MDBtczsgfVxyXG4ucHJlbG9hZGVyIC5saW5lLTIsIC5wcmVsb2FkZXItMiAubGluZS0yIHsgYW5pbWF0aW9uLWRlbGF5OiA2MDBtczsgfVxyXG4ucHJlbG9hZGVyIC5saW5lLTMsIC5wcmVsb2FkZXItMiAubGluZS0zIHsgYW5pbWF0aW9uLWRlbGF5OiA0MDBtczsgfVxyXG4ucHJlbG9hZGVyIC5saW5lLTQsIC5wcmVsb2FkZXItMiAubGluZS00IHsgYW5pbWF0aW9uLWRlbGF5OiAyMDBtczsgfVxyXG4ucHJlbG9hZGVyIC5saW5lLTYsIC5wcmVsb2FkZXItMiAubGluZS02IHsgYW5pbWF0aW9uLWRlbGF5OiAyMDBtczsgfVxyXG4ucHJlbG9hZGVyIC5saW5lLTcsIC5wcmVsb2FkZXItMiAubGluZS03IHsgYW5pbWF0aW9uLWRlbGF5OiA0MDBtczsgfVxyXG4ucHJlbG9hZGVyIC5saW5lLTgsIC5wcmVsb2FkZXItMiAubGluZS04IHsgYW5pbWF0aW9uLWRlbGF5OiA2MDBtczsgfVxyXG4ucHJlbG9hZGVyIC5saW5lLTksIC5wcmVsb2FkZXItMiAubGluZS05IHsgYW5pbWF0aW9uLWRlbGF5OiA4MDBtczsgfVxyXG5cclxuQGtleWZyYW1lcyBvcGFjaXR5LTEge1xyXG4gIDAlIHtcclxuICAgIG9wYWNpdHk6IDE7XHJcbiAgfVxyXG4gIDUwJSB7XHJcbiAgICBvcGFjaXR5OiAwO1xyXG4gIH1cclxuICAxMDAlIHtcclxuICAgIG9wYWNpdHk6IDE7XHJcbiAgfVxyXG59XHJcblxyXG5Aa2V5ZnJhbWVzIG9wYWNpdHktMiB7XHJcbiAgMCUge1xyXG4gICAgb3BhY2l0eTogMTtcclxuICAgIGhlaWdodDogMTVweDtcclxuICB9XHJcbiAgNTAlIHtcclxuICAgIG9wYWNpdHk6IDA7XHJcbiAgICBoZWlnaHQ6IDEycHg7XHJcbiAgfVxyXG4gIDEwMCUge1xyXG4gICAgb3BhY2l0eTogMTtcclxuICAgIGhlaWdodDogMTVweDtcclxuICB9XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -1139,11 +1148,10 @@ var CommitService = /** @class */ (function () {
     function CommitService(http) {
         this.http = http;
     }
-    CommitService.prototype.loadCommits = function () {
-        return this.http.get(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects/8/commits?page=0&size=999", {
-            headers: { 'Authorization': "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb2RlcmFkYXIiLCJleHAiOjE1NDI5OTQ4ODksInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE1NDI5OTM5ODksInVzZXJJZCI6IjMiLCJ1c2VybmFtZSI6InJhZGFyIn0.QUfDl7GRWvWlvUP2J32nuR4cJ_jH95rJz4CfoCO2ScQ" }
-        })
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (result) { return result._embedded.commitResourceList; }));
+    CommitService.prototype.loadCommits = function (accessToken) {
+        console.log("--------LOADING-COMMITS---------");
+        console.log(accessToken);
+        return this.http.get(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects/1/commits?page=0&size=999", { headers: { 'Authorization': accessToken } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (result) { return result._embedded.commitResourceList; }));
     };
     CommitService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -1170,6 +1178,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _AppConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AppConfig */ "./src/app/AppConfig.ts");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _setup_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./setup.service */ "./src/app/service/setup.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1183,27 +1192,29 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var MetricService = /** @class */ (function () {
-    function MetricService(http) {
+    function MetricService(http, setupService) {
         this.http = http;
+        this.setupService = setupService;
     }
     MetricService.prototype.loadAvailableMetrics = function () {
         return this.http.get(_AppConfig__WEBPACK_IMPORTED_MODULE_2__["AppConfig"].BASE_URL + "/projects/8/metrics")
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (result) { return result._embedded.metricResourceList.map(function (metric) { return _AppConfig__WEBPACK_IMPORTED_MODULE_2__["AppConfig"].getShortNameByMetricName(metric.metricName); }); }));
     };
-    MetricService.prototype.loadDeltaTree = function (currentCommit, previousCommit, metricNames) {
+    MetricService.prototype.loadDeltaTree = function (accessToken, currentCommit, previousCommit, metricNames) {
+        //console.log("--------LOADING-DELTATREE---------");
+        //console.log(accessToken);
         var body = {
             'commit1': currentCommit.name,
             'commit2': previousCommit.name,
             'metrics': metricNames
         };
-        //console.log(currentCommit.name);
-        //console.log(this.http.post<INode>(`${AppConfig.BASE_URL}/projects/8/metricvalues/deltaTree`, body));
-        return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_2__["AppConfig"].BASE_URL + "/projects/8/metricvalues/deltaTree", body);
+        return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_2__["AppConfig"].BASE_URL + "/projects/1/metricvalues/deltaTree", body, { headers: { 'Authorization': accessToken } });
     };
     MetricService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _setup_service__WEBPACK_IMPORTED_MODULE_4__["SetupService"]])
     ], MetricService);
     return MetricService;
 }());
@@ -1244,15 +1255,14 @@ var SetupService = /** @class */ (function () {
         this.http = http;
     }
     SetupService.prototype.setupServer = function () {
-        var _this = this;
         var accessToken;
         this.authorizeUser().subscribe(function (loginResult) {
             accessToken = loginResult;
-            console.log(accessToken);
-            _this.createProject(accessToken);
-            _this.addFilePattern(accessToken);
-            _this.addAnalyzerConfig(accessToken);
-            _this.addAnalyzingStrategy(accessToken);
+            //console.log(accessToken);
+            /**this.createProject(accessToken);
+            this.addFilePattern(accessToken);
+            this.addAnalyzerConfig(accessToken);
+            this.addAnalyzingStrategy(accessToken);**/
         });
         return true;
     };
@@ -1268,8 +1278,6 @@ var SetupService = /** @class */ (function () {
         return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/user/auth", {
             "username": _AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].USERNAME,
             "password": _AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].PASSWORD
-        }, {
-            headers: { 'accept': '*/*' }
         }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (result) { return result.accessToken; }));
     };
     SetupService.prototype.createProject = function (accessToken) {
@@ -1287,7 +1295,12 @@ var SetupService = /** @class */ (function () {
         console.log('adding file pattern...');
         return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects/8/files", {
             "filePatterns": [{
-                    "pattern": "**/*.java",
+                    "pattern": "budgeteer-web-interface/src/main/java/**/*.java",
+                    "inclusionType": "INCLUDE",
+                    "fileSetType": "SOURCE"
+                },
+                {
+                    "pattern": "budgeteer-web-interface/src/main/java/src/main/java/**/*.html",
                     "inclusionType": "INCLUDE",
                     "fileSetType": "SOURCE"
                 }]
