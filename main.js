@@ -40,8 +40,8 @@ var AppConfig = /** @class */ (function () {
         return this.METRIC_NAME_MAPPING.find(function (namePair) { return namePair.metricName === metricName; });
     };
     // CODERADAR SERVER CONFIG
-    //static BASE_URL = 'https://adesso-coderadar-dev01.test-server.ag';
-    AppConfig.BASE_URL = 'http://localhost:8080';
+    AppConfig.BASE_URL = 'https://adesso-coderadar-dev01.test-server.ag';
+    AppConfig.BASE_URL_LOCAL = 'http://localhost:8080';
     AppConfig.USERNAME = 'radar';
     AppConfig.PASSWORD = 'Password12!';
     AppConfig.TIME_FILTER_MAPPING = [
@@ -844,21 +844,17 @@ var GeneralViewComponent = /** @class */ (function () {
     }
     GeneralViewComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.serverSetUp = this.setupService.setupServer();
-        this.expAccessToken = this.setupService.authorizeUser();
-        if (this.serverSetUp) {
-            this.setupService.authorizeUser().subscribe(function (loginResultAccessToken) {
-                _this.commitService.loadCommits(loginResultAccessToken).subscribe(function (commits) {
-                    commits
-                        .filter(function (ICommit) { return ICommit.timestamp > (Date.now() - 2629743000); })
-                        .filter(function (ICommit) { return ICommit.analyzed == true; })
-                        .sort(function (a, b) { return b.timestamp - a.timestamp; });
-                    _this.commits = commits;
-                });
-                _this.appMetrics = Array.from(new Set(_AppConfig__WEBPACK_IMPORTED_MODULE_4__["AppConfig"].METRIC_NAME_MAPPING));
-                //this.metricService.loadAvailableMetrics().subscribe(metrics => this.availableMetrics = metrics);
+        this.setupService.authorizeUser().subscribe(function (loginResultAccessToken) {
+            _this.commitService.loadCommits(loginResultAccessToken).subscribe(function (commits) {
+                commits
+                    .filter(function (ICommit) { return ICommit.timestamp > (Date.now() - 2629743000); })
+                    .filter(function (ICommit) { return ICommit.analyzed == true; })
+                    .sort(function (a, b) { return b.timestamp - a.timestamp; });
+                _this.commits = commits;
             });
-        }
+            _this.appMetrics = Array.from(new Set(_AppConfig__WEBPACK_IMPORTED_MODULE_4__["AppConfig"].METRIC_NAME_MAPPING));
+            //this.metricService.loadAvailableMetrics().subscribe(metrics => this.availableMetrics = metrics);
+        });
     };
     GeneralViewComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1151,7 +1147,7 @@ var CommitService = /** @class */ (function () {
     CommitService.prototype.loadCommits = function (accessToken) {
         console.log("--------LOADING-COMMITS---------");
         console.log(accessToken);
-        return this.http.get(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects/1/commits?page=0&size=999", { headers: { 'Authorization': accessToken } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (result) { return result._embedded.commitResourceList; }));
+        return this.http.get(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects/8/commits?page=0&size=999", { headers: { 'Authorization': accessToken } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (result) { return result._embedded.commitResourceList; }));
     };
     CommitService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -1210,7 +1206,7 @@ var MetricService = /** @class */ (function () {
             'commit2': previousCommit.name,
             'metrics': metricNames
         };
-        return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_2__["AppConfig"].BASE_URL + "/projects/1/metricvalues/deltaTree", body, { headers: { 'Authorization': accessToken } });
+        return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_2__["AppConfig"].BASE_URL + "/projects/8/metricvalues/deltaTree", body, { headers: { 'Authorization': accessToken } });
     };
     MetricService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
