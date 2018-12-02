@@ -294,15 +294,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngrx/store-devtools */ "./node_modules/@ngrx/store-devtools/fesm5/store-devtools.js");
-/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_general_view_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/general-view.module */ "./src/app/components/general-view.module.ts");
-/* harmony import */ var _service_commit_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./service/commit.service */ "./src/app/service/commit.service.ts");
-/* harmony import */ var _service_metric_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./service/metric.service */ "./src/app/service/metric.service.ts");
-/* harmony import */ var _service_setup_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./service/setup.service */ "./src/app/service/setup.service.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngrx/store-devtools */ "./node_modules/@ngrx/store-devtools/fesm5/store-devtools.js");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_general_view_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/general-view.module */ "./src/app/components/general-view.module.ts");
+/* harmony import */ var _service_commit_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./service/commit.service */ "./src/app/service/commit.service.ts");
+/* harmony import */ var _service_metric_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./service/metric.service */ "./src/app/service/metric.service.ts");
+/* harmony import */ var _service_setup_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./service/setup.service */ "./src/app/service/setup.service.ts");
+/* harmony import */ var _service_element_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./service/element.service */ "./src/app/service/element.service.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -324,13 +326,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var TeamGamificationAppModule = /** @class */ (function () {
     function TeamGamificationAppModule() {
     }
     TeamGamificationAppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -339,17 +343,19 @@ var TeamGamificationAppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_5__["HttpModule"],
-                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_7__["FontAwesomeModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_8__["FlexLayoutModule"],
-                _components_general_view_module__WEBPACK_IMPORTED_MODULE_10__["ViewModule"],
-                _environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].production ? [] : _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_6__["StoreDevtoolsModule"].instrument({ maxAge: 50 })
+                _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"],
+                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_8__["FontAwesomeModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"],
+                _components_general_view_module__WEBPACK_IMPORTED_MODULE_11__["ViewModule"],
+                _environments_environment__WEBPACK_IMPORTED_MODULE_16__["environment"].production ? [] : _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_7__["StoreDevtoolsModule"].instrument({ maxAge: 50 })
             ],
             providers: [
-                _service_commit_service__WEBPACK_IMPORTED_MODULE_11__["CommitService"],
-                _service_metric_service__WEBPACK_IMPORTED_MODULE_12__["MetricService"],
-                _service_setup_service__WEBPACK_IMPORTED_MODULE_13__["SetupService"]
+                _service_commit_service__WEBPACK_IMPORTED_MODULE_12__["CommitService"],
+                _service_metric_service__WEBPACK_IMPORTED_MODULE_13__["MetricService"],
+                _service_setup_service__WEBPACK_IMPORTED_MODULE_14__["SetupService"],
+                _service_element_service__WEBPACK_IMPORTED_MODULE_15__["ElementService"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
         })
     ], TeamGamificationAppModule);
     return TeamGamificationAppModule;
@@ -366,7 +372,7 @@ var TeamGamificationAppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".choose-time-filter {\r\n  background: #213B4C;\r\n  border: solid 3px #213B4C;\r\n  display: inline-block;\r\n  margin: 1%;\r\n  margin-top: 10px;\r\n  margin-bottom: 10px;\r\n  border-radius: 10px;\r\n  overflow: hidden;\r\n  font-size: 30px;\r\n  text-align: center;\r\n  padding: 20px 0px 20px 0px;\r\n  width: 98%;\r\n  color: #ccc;\r\n  font-family: 'Arial', sans-serif;\r\n\r\n}\r\n\r\ninput[type=radio] {\r\n  position: absolute;\r\n  visibility: hidden;\r\n  display: none;\r\n}\r\n\r\nlabel {\r\n  display: inline-block;\r\n  cursor: pointer;\r\n  font-weight: bold;\r\n  padding: 2px 10px;\r\n  width: 15%;\r\n}\r\n\r\ninput[type=radio]:checked + label{\r\n  background: #0C1E28;\r\n  border-radius: 20px;\r\n}\r\n\r\nlabel + input[type=radio] + label {\r\n  border-left: solid $borderWidth $fg;\r\n}\r\n\r\n.board-container {\r\n  box-sizing: border-box;\r\n  display: flex;\r\n  max-height: 80%;\r\n  height: 80%;\r\n  place-content: center space-around;\r\n  align-content: center;\r\n  justify-content: space-around;\r\n  margin-top: 10px;\r\n  font-family: 'Arial', sans-serif;\r\n\r\n}\r\n\r\n.board-container::after {\r\n  clear: both;\r\n  display: table;\r\n}\r\n\r\n.leader-board-container {\r\n  float:left;\r\n  width: 60%;\r\n  height: 80%;\r\n}\r\n\r\n.commit-feed-container {\r\n  float: float;\r\n  width: 40%;\r\n  height: 80%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2JvYXJkLXZpZXcuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG9CQUFvQjtFQUNwQiwwQkFBMEI7RUFDMUIsc0JBQXNCO0VBQ3RCLFdBQVc7RUFDWCxpQkFBaUI7RUFDakIsb0JBQW9CO0VBQ3BCLG9CQUFvQjtFQUNwQixpQkFBaUI7RUFDakIsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtFQUNuQiwyQkFBMkI7RUFDM0IsV0FBVztFQUNYLFlBQVk7RUFDWixpQ0FBaUM7O0NBRWxDOztBQUVEO0VBQ0UsbUJBQW1CO0VBQ25CLG1CQUFtQjtFQUNuQixjQUFjO0NBQ2Y7O0FBRUQ7RUFDRSxzQkFBc0I7RUFDdEIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixrQkFBa0I7RUFDbEIsV0FBVztDQUNaOztBQUVEO0VBQ0Usb0JBQW9CO0VBQ3BCLG9CQUFvQjtDQUNyQjs7QUFFRDtFQUNFLG9DQUFvQztDQUNyQzs7QUFFRDtFQUNFLHVCQUF1QjtFQUN2QixjQUFjO0VBQ2QsZ0JBQWdCO0VBQ2hCLFlBQVk7RUFDWixtQ0FBbUM7RUFDbkMsc0JBQXNCO0VBQ3RCLDhCQUE4QjtFQUM5QixpQkFBaUI7RUFDakIsaUNBQWlDOztDQUVsQzs7QUFFRDtFQUNFLFlBQVk7RUFDWixlQUFlO0NBQ2hCOztBQUdEO0VBQ0UsV0FBVztFQUNYLFdBQVc7RUFDWCxZQUFZO0NBQ2I7O0FBRUQ7RUFDRSxhQUFhO0VBQ2IsV0FBVztFQUNYLFlBQVk7Q0FDYiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYm9hcmQtdmlldy9ib2FyZC12aWV3LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2hvb3NlLXRpbWUtZmlsdGVyIHtcclxuICBiYWNrZ3JvdW5kOiAjMjEzQjRDO1xyXG4gIGJvcmRlcjogc29saWQgM3B4ICMyMTNCNEM7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIG1hcmdpbjogMSU7XHJcbiAgbWFyZ2luLXRvcDogMTBweDtcclxuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICBmb250LXNpemU6IDMwcHg7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHBhZGRpbmc6IDIwcHggMHB4IDIwcHggMHB4O1xyXG4gIHdpZHRoOiA5OCU7XHJcbiAgY29sb3I6ICNjY2M7XHJcbiAgZm9udC1mYW1pbHk6ICdBcmlhbCcsIHNhbnMtc2VyaWY7XHJcblxyXG59XHJcblxyXG5pbnB1dFt0eXBlPXJhZGlvXSB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHZpc2liaWxpdHk6IGhpZGRlbjtcclxuICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG5sYWJlbCB7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxuICBwYWRkaW5nOiAycHggMTBweDtcclxuICB3aWR0aDogMTUlO1xyXG59XHJcblxyXG5pbnB1dFt0eXBlPXJhZGlvXTpjaGVja2VkICsgbGFiZWx7XHJcbiAgYmFja2dyb3VuZDogIzBDMUUyODtcclxuICBib3JkZXItcmFkaXVzOiAyMHB4O1xyXG59XHJcblxyXG5sYWJlbCArIGlucHV0W3R5cGU9cmFkaW9dICsgbGFiZWwge1xyXG4gIGJvcmRlci1sZWZ0OiBzb2xpZCAkYm9yZGVyV2lkdGggJGZnO1xyXG59XHJcblxyXG4uYm9hcmQtY29udGFpbmVyIHtcclxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgbWF4LWhlaWdodDogODAlO1xyXG4gIGhlaWdodDogODAlO1xyXG4gIHBsYWNlLWNvbnRlbnQ6IGNlbnRlciBzcGFjZS1hcm91bmQ7XHJcbiAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgZm9udC1mYW1pbHk6ICdBcmlhbCcsIHNhbnMtc2VyaWY7XHJcblxyXG59XHJcblxyXG4uYm9hcmQtY29udGFpbmVyOjphZnRlciB7XHJcbiAgY2xlYXI6IGJvdGg7XHJcbiAgZGlzcGxheTogdGFibGU7XHJcbn1cclxuXHJcblxyXG4ubGVhZGVyLWJvYXJkLWNvbnRhaW5lciB7XHJcbiAgZmxvYXQ6bGVmdDtcclxuICB3aWR0aDogNjAlO1xyXG4gIGhlaWdodDogODAlO1xyXG59XHJcblxyXG4uY29tbWl0LWZlZWQtY29udGFpbmVyIHtcclxuICBmbG9hdDogZmxvYXQ7XHJcbiAgd2lkdGg6IDQwJTtcclxuICBoZWlnaHQ6IDgwJTtcclxufVxyXG4iXX0= */"
+module.exports = ".choose-time-filter {\r\n   background: #213B4C;\r\n   border: solid 3px #213B4C;\r\n   display: inline-block;\r\n   margin: 1%;\r\n   margin-top: 10px;\r\n   margin-bottom: 3px;\r\n   border-radius: 10px;\r\n   overflow: hidden;\r\n   font-size: 30px;\r\n   text-align: center;\r\n   padding: 20px 0px 20px 0px;\r\n   width: 98%;\r\n   color: #ccc;\r\n   font-family: 'Arial', sans-serif;\r\n\r\n }\r\n\r\n.choose-board {\r\n   background: #213B4C;\r\n      border: solid 3px #213B4C;\r\n      display: inline-block;\r\n      margin: 1%;\r\n      margin-top: 3px;\r\n      margin-bottom: 10px;\r\n      border-radius: 10px;\r\n      overflow: hidden;\r\n      font-size: 30px;\r\n      text-align: center;\r\n      padding: 20px 0px 20px 0px;\r\n      width: 98%;\r\n      color: #ccc;\r\n      font-family: 'Arial', sans-serif;\r\n }\r\n\r\ninput[type=radio] {\r\n  position: absolute;\r\n  visibility: hidden;\r\n  display: none;\r\n}\r\n\r\nlabel {\r\n  display: inline-block;\r\n  cursor: pointer;\r\n  font-weight: bold;\r\n  padding: 2px 10px;\r\n  margin-left: 10px;\r\n  margin-right: 10px;\r\n}\r\n\r\ninput[type=radio]:checked + label{\r\n  background: #0C1E28;\r\n  border-radius: 20px;\r\n}\r\n\r\nlabel + input[type=radio] + label {\r\n  border-left: solid $borderWidth $fg;\r\n}\r\n\r\n.board-container {\r\n  box-sizing: border-box;\r\n  max-height: 80%;\r\n  height: 80%;\r\n  place-content: center space-around;\r\n  align-content: center;\r\n  justify-content: space-around;\r\n  margin-top: 10px;\r\n  font-family: 'Arial', sans-serif;\r\n\r\n}\r\n\r\n.board-container::after {\r\n  clear: both;\r\n  display: table;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2JvYXJkLXZpZXcuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtHQUNHLG9CQUFvQjtHQUNwQiwwQkFBMEI7R0FDMUIsc0JBQXNCO0dBQ3RCLFdBQVc7R0FDWCxpQkFBaUI7R0FDakIsbUJBQW1CO0dBQ25CLG9CQUFvQjtHQUNwQixpQkFBaUI7R0FDakIsZ0JBQWdCO0dBQ2hCLG1CQUFtQjtHQUNuQiwyQkFBMkI7R0FDM0IsV0FBVztHQUNYLFlBQVk7R0FDWixpQ0FBaUM7O0VBRWxDOztBQUVGO0dBQ0csb0JBQW9CO01BQ2pCLDBCQUEwQjtNQUMxQixzQkFBc0I7TUFDdEIsV0FBVztNQUNYLGdCQUFnQjtNQUNoQixvQkFBb0I7TUFDcEIsb0JBQW9CO01BQ3BCLGlCQUFpQjtNQUNqQixnQkFBZ0I7TUFDaEIsbUJBQW1CO01BQ25CLDJCQUEyQjtNQUMzQixXQUFXO01BQ1gsWUFBWTtNQUNaLGlDQUFpQztFQUNyQzs7QUFFRjtFQUNFLG1CQUFtQjtFQUNuQixtQkFBbUI7RUFDbkIsY0FBYztDQUNmOztBQUVEO0VBQ0Usc0JBQXNCO0VBQ3RCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQixtQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxvQkFBb0I7RUFDcEIsb0JBQW9CO0NBQ3JCOztBQUVEO0VBQ0Usb0NBQW9DO0NBQ3JDOztBQUVEO0VBQ0UsdUJBQXVCO0VBQ3ZCLGdCQUFnQjtFQUNoQixZQUFZO0VBQ1osbUNBQW1DO0VBQ25DLHNCQUFzQjtFQUN0Qiw4QkFBOEI7RUFDOUIsaUJBQWlCO0VBQ2pCLGlDQUFpQzs7Q0FFbEM7O0FBRUQ7RUFDRSxZQUFZO0VBQ1osZUFBZTtDQUNoQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYm9hcmQtdmlldy9ib2FyZC12aWV3LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2hvb3NlLXRpbWUtZmlsdGVyIHtcclxuICAgYmFja2dyb3VuZDogIzIxM0I0QztcclxuICAgYm9yZGVyOiBzb2xpZCAzcHggIzIxM0I0QztcclxuICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICBtYXJnaW46IDElO1xyXG4gICBtYXJnaW4tdG9wOiAxMHB4O1xyXG4gICBtYXJnaW4tYm90dG9tOiAzcHg7XHJcbiAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgIGZvbnQtc2l6ZTogMzBweDtcclxuICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICBwYWRkaW5nOiAyMHB4IDBweCAyMHB4IDBweDtcclxuICAgd2lkdGg6IDk4JTtcclxuICAgY29sb3I6ICNjY2M7XHJcbiAgIGZvbnQtZmFtaWx5OiAnQXJpYWwnLCBzYW5zLXNlcmlmO1xyXG5cclxuIH1cclxuXHJcbi5jaG9vc2UtYm9hcmQge1xyXG4gICBiYWNrZ3JvdW5kOiAjMjEzQjRDO1xyXG4gICAgICBib3JkZXI6IHNvbGlkIDNweCAjMjEzQjRDO1xyXG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICAgIG1hcmdpbjogMSU7XHJcbiAgICAgIG1hcmdpbi10b3A6IDNweDtcclxuICAgICAgbWFyZ2luLWJvdHRvbTogMTBweDtcclxuICAgICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgICAgZm9udC1zaXplOiAzMHB4O1xyXG4gICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICAgIHBhZGRpbmc6IDIwcHggMHB4IDIwcHggMHB4O1xyXG4gICAgICB3aWR0aDogOTglO1xyXG4gICAgICBjb2xvcjogI2NjYztcclxuICAgICAgZm9udC1mYW1pbHk6ICdBcmlhbCcsIHNhbnMtc2VyaWY7XHJcbiB9XHJcblxyXG5pbnB1dFt0eXBlPXJhZGlvXSB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHZpc2liaWxpdHk6IGhpZGRlbjtcclxuICBkaXNwbGF5OiBub25lO1xyXG59XHJcblxyXG5sYWJlbCB7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxuICBwYWRkaW5nOiAycHggMTBweDtcclxuICBtYXJnaW4tbGVmdDogMTBweDtcclxuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XHJcbn1cclxuXHJcbmlucHV0W3R5cGU9cmFkaW9dOmNoZWNrZWQgKyBsYWJlbHtcclxuICBiYWNrZ3JvdW5kOiAjMEMxRTI4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDIwcHg7XHJcbn1cclxuXHJcbmxhYmVsICsgaW5wdXRbdHlwZT1yYWRpb10gKyBsYWJlbCB7XHJcbiAgYm9yZGVyLWxlZnQ6IHNvbGlkICRib3JkZXJXaWR0aCAkZmc7XHJcbn1cclxuXHJcbi5ib2FyZC1jb250YWluZXIge1xyXG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgbWF4LWhlaWdodDogODAlO1xyXG4gIGhlaWdodDogODAlO1xyXG4gIHBsYWNlLWNvbnRlbnQ6IGNlbnRlciBzcGFjZS1hcm91bmQ7XHJcbiAgYWxpZ24tY29udGVudDogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgZm9udC1mYW1pbHk6ICdBcmlhbCcsIHNhbnMtc2VyaWY7XHJcblxyXG59XHJcblxyXG4uYm9hcmQtY29udGFpbmVyOjphZnRlciB7XHJcbiAgY2xlYXI6IGJvdGg7XHJcbiAgZGlzcGxheTogdGFibGU7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -377,7 +383,7 @@ module.exports = ".choose-time-filter {\r\n  background: #213B4C;\r\n  border: s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"ICommitElements.length == commits.length-1\n              && IUserLeaderboardElements\n              && activeTimeFilterValue;\n            else loadingScreen\">\n  <div class=\"choose-time-filter\">\n    <input type=\"radio\" id=\"radio-today\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"86400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-today\" title=\"Heute\">24 Stunden</label>\n    <input type=\"radio\" id=\"radio-3-days\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"259200000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-3-days\" title=\"Diese Woche\">3 Tage</label>\n    <input type=\"radio\" id=\"radio-week\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"604800000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-week\" title=\"Diese Woche\">7 Tage</label>\n    <input type=\"radio\" id=\"radio-2-weeks\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"1209600000\" [(ngModel)]=\"activeTimeFilterValue\" />\n    <label class=\"custom-control-label\" for=\"radio-2-weeks\" title=\"Insgesamt\">2 Wochen</label>\n    <input type=\"radio\" id=\"radio-month\" name=\"radio-group-screen\" class=\"custom-control-input\" [value]=\"2629743000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-month\" title=\"Dieser Monat\">1 Monat</label>\n  </div>\n</div>\n<div class=\"board-container\" *ngIf=\"ICommitElements.length > 1\n                                      && IUserLeaderboardElements\n                                      && activeTimeFilterValue\">\n  <div class=\"leader-board-container\">\n    <leader-board\n      [commitElements]=\"ICommitElements\"\n      [userLeaderboardElements]=\"IUserLeaderboardElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </leader-board>\n  </div>\n  <div class=\"commit-feed-container\">\n    <commit-feed\n      [commitElements]=\"ICommitElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </commit-feed>\n  </div>\n</div>\n\n<ng-template #loadingScreen>\n  <loading-screen\n    [loadingIterator]=\"ICommitElements.length\"\n    [loadingElements]=\"commits.length-1\">\n  </loading-screen>\n</ng-template>\n\n"
+module.exports = "<div *ngIf=\"ICommitElements.length == commits.length-1\n              && IUserElements\n              && activeTimeFilterValue\n            else loadingScreen\">\n  <div class=\"choose-time-filter\">\n    <input type=\"radio\" id=\"radio-today\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"86400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-today\" title=\"Heute\">1 Tag</label>\n    <input type=\"radio\" id=\"radio-3-days\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"259200000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-3-days\" title=\"Diese 3 Tage\">3 Tage</label>\n    <input type=\"radio\" id=\"radio-week\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"604800000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-week\" title=\"Diese Woche\">7 Tage</label>\n    <input type=\"radio\" id=\"radio-2-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1209600000\" [(ngModel)]=\"activeTimeFilterValue\" />\n    <label class=\"custom-control-label\" for=\"radio-2-weeks\" title=\"Diese 2 Wochen\">2 Wochen</label>\n    <input type=\"radio\" id=\"radio-3-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1814400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-3-weeks\" title=\"Diese 3 Wochen\">3 Wochen</label>\n    <input type=\"radio\" id=\"radio-month\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"2629743000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-month\" title=\"Dieser Monat\">1 Monat</label>\n  </div>\n  <div class=\"choose-board\">\n    <input type=\"radio\" id=\"radio-commit-feed\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitFeed'\" [(ngModel)]=\"selectedBoard\"/>\n    <label class=\"custom-control-label\" for=\"radio-commit-feed\" title=\"Alle Commits\">Alle Commits</label>\n    <input type=\"radio\" id=\"radio-commit-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\n    <label class=\"custom-control-label\" for=\"radio-commit-leaderboard\" title=\"Beste Commits\">Beste Commits</label>\n    <input type=\"radio\" id=\"radio-user-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectUserLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\n    <label class=\"custom-control-label\" for=\"radio-user-leaderboard\" title=\"Beste User\">Beste User</label>\n  </div>\n</div>\n<div class=\"board-container\" *ngIf=\"ICommitElements.length > 1\n                                      && IUserElements\n                                      && activeTimeFilterValue\n                                      && selectedBoard\">\n  <div class=\"user-leader-board-container\" *ngIf=\"selectedBoard == 'selectUserLeaderboard' \">\n    <user-leader-board\n      [userElements]=\"IUserElements\"\n      [commitElements]=\"ICommitElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </user-leader-board>\n  </div>\n  <div class=\"commit-leader-board-container\" *ngIf=\"selectedBoard == 'selectCommitLeaderboard' \">\n    <commit-leader-board\n      [userElements]=\"IUserElements\"\n      [commitElements]=\"ICommitElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </commit-leader-board>\n  </div>\n  <div class=\"commit-feed-container\" *ngIf=\"selectedBoard == 'selectCommitFeed' \">\n    <commit-feed\n      [commitElements]=\"ICommitElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </commit-feed>\n  </div>\n</div>\n<ng-template #loadingScreen>\n  <loading-screen\n    [loadingIterator]=\"ICommitElements.length\"\n    [loadingElements]=\"commits.length-1\">\n  </loading-screen>\n</ng-template>\n\n"
 
 /***/ }),
 
@@ -415,12 +421,14 @@ var BoardViewComponent = /** @class */ (function () {
     }
     BoardViewComponent.prototype.ngOnInit = function () {
         var _this = this;
+        console.log("Geladene Commits");
         console.log(this.commits);
+        console.log("Geladene Metriken");
         console.log(this.availableMetrics);
-        console.log(this.commits);
         this.activeTimeFilterValue = this.setActiveTimeFilter(this.commits[0].timestamp);
+        this.selectedBoard = "";
         this.ICommitElements = [];
-        this.IUserLeaderboardElements = [];
+        this.IUserElements = [];
         this.authors = Array.from(new Set(this.commits.map(function (commit) { return commit.author; })));
         this.metricNames = this.availableMetrics.map(function (metric) { return metric.metricName; });
         this.setupService.authorizeUser().subscribe(function (loginResultAccessToken) {
@@ -432,12 +440,9 @@ var BoardViewComponent = /** @class */ (function () {
                 var bestCommitName = _this.commits[0].name;
                 var bestCommitDate = new Date(_this.commits[0].timestamp).toLocaleDateString();
                 var singleUserHighscore = 0;
-                _this.IUserLeaderboardElements.push({
+                _this.IUserElements.push({
                     user: authorName,
-                    totalUserPoints: totalUserHighscore,
-                    bestCommitName: bestCommitName,
-                    bestCommitDate: bestCommitDate,
-                    bestCommitPoints: singleUserHighscore,
+                    commitsPerUser: []
                 });
             }
             var _loop_1 = function () {
@@ -445,13 +450,14 @@ var BoardViewComponent = /** @class */ (function () {
                 var tableRows = [];
                 var totalCommitPoints = 0;
                 var currentCommit = _this.commits[i];
-                //console.log("------------------------------");
-                //console.log(i);
-                //console.log(currentCommit);
                 var previousCommit = _this.commits[i + 1];
                 //console.log(previousCommit);
+                /**console.log("------------------------------");
+                console.log(this.commits.length-i);
+                console.log(new Date(currentCommit.timestamp).toLocaleDateString());
+                console.log(new Date(previousCommit.timestamp).toLocaleDateString());**/
                 var commitDate = new Date(currentCommit.timestamp).toLocaleDateString();
-                var currentUserKey = _this.IUserLeaderboardElements.findIndex(function (i) { return i.user === currentCommit.author; });
+                var currentUserKey = _this.IUserElements.findIndex(function (i) { return i.user === currentCommit.author; });
                 _this.metricService.loadDeltaTree(loginResultAccessToken, previousCommit, currentCommit, _this.metricNames).subscribe(function (node) {
                     deltaTree = node;
                     //console.log(deltaTree);
@@ -466,15 +472,14 @@ var BoardViewComponent = /** @class */ (function () {
                         totalPoints: totalCommitPoints,
                         tableRows: tableRows
                     });
-                    if (totalCommitPoints > _this.IUserLeaderboardElements[currentUserKey].bestCommitPoints) {
-                        _this.IUserLeaderboardElements[currentUserKey].bestCommitName = currentCommit.name;
-                        _this.IUserLeaderboardElements[currentUserKey].bestCommitDate = commitDate;
-                        _this.IUserLeaderboardElements[currentUserKey].bestCommitPoints = totalCommitPoints;
-                    }
-                    _this.IUserLeaderboardElements[currentUserKey].totalUserPoints += totalCommitPoints;
+                    _this.IUserElements[currentUserKey].commitsPerUser.push({
+                        currentCommit: currentCommit,
+                        previousCommit: previousCommit,
+                        date: commitDate,
+                        totalPoints: totalCommitPoints,
+                        tableRows: tableRows
+                    });
                     _this.ICommitElements.sort(function (a, b) { return b.currentCommit.timestamp - a.currentCommit.timestamp; });
-                    _this.IUserLeaderboardElements.sort(function (a, b) { return b.totalUserPoints - a.totalUserPoints; });
-                    //console.log(this.IUserLeaderboardElements);
                 });
             };
             for (var i = 0; i < _this.commits.length - 1; i++) {
@@ -488,15 +493,15 @@ var BoardViewComponent = /** @class */ (function () {
             var key = _a[_i];
             var metricName = this.availableMetrics[key].metricName;
             //console.log("Metricname: " + metricName);
-            var currentCommitValue = void 0;
-            if (foundElement.commit1Metrics && foundElement.commit1Metrics[metricName]) {
-                currentCommitValue = foundElement.commit1Metrics[metricName];
-                //console.log("Current Value: " + currentCommitValue);
-            }
             var previousCommitValue = void 0;
-            if (foundElement.commit2Metrics && foundElement.commit2Metrics[metricName]) {
-                previousCommitValue = foundElement.commit2Metrics[metricName];
+            if (foundElement.commit1Metrics && foundElement.commit1Metrics[metricName]) {
+                previousCommitValue = foundElement.commit1Metrics[metricName];
                 //console.log("Previous Value: " + previousCommitValue);
+            }
+            var currentCommitValue = void 0;
+            if (foundElement.commit2Metrics && foundElement.commit2Metrics[metricName]) {
+                currentCommitValue = foundElement.commit2Metrics[metricName];
+                //console.log("Current Value: " + currentCommitValue);
             }
             var difference = 0;
             if (currentCommitValue && previousCommitValue) {
@@ -528,7 +533,34 @@ var BoardViewComponent = /** @class */ (function () {
         return rows;
     };
     BoardViewComponent.prototype.setActiveTimeFilter = function (firstCommitTimestamp) {
-        return 86400000;
+        console.log(new Date(firstCommitTimestamp).toLocaleDateString());
+        if (firstCommitTimestamp > (Date.now() - 86400000)) {
+            return 86400000;
+        }
+        else if (firstCommitTimestamp > (Date.now() - 259200000)) {
+            return 259200000;
+        }
+        else if (firstCommitTimestamp > (Date.now() - 604800000)) {
+            return 604800000;
+        }
+        else if (firstCommitTimestamp > (Date.now() - 1209600000)) {
+            return 1209600000;
+        }
+        else if (firstCommitTimestamp > (Date.now() - 1814400000)) {
+            return 1814400000;
+        }
+        else if (firstCommitTimestamp > (Date.now() - 2629743000)) {
+            return 2629743000;
+        }
+        else {
+            return 15778458000;
+        }
+    };
+    BoardViewComponent.prototype.ngOnChanges = function () {
+        if (this.selectedBoard) {
+            console.log("000000000000000000000000000000000000000");
+            console.log(this.selectedBoard);
+        }
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -570,13 +602,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_components_shared_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../shared-components/shared.module */ "./src/app/components/shared-components/shared.module.ts");
 /* harmony import */ var _board_view_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./board-view.component */ "./src/app/components/board-view/board-view.component.ts");
 /* harmony import */ var _commit_feed_commit_feed_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./commit-feed/commit-feed.component */ "./src/app/components/board-view/commit-feed/commit-feed.component.ts");
-/* harmony import */ var _leader_board_leader_board_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./leader-board/leader-board.component */ "./src/app/components/board-view/leader-board/leader-board.component.ts");
+/* harmony import */ var _leader_boards_user_leader_board_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./leader-boards/user-leader-board.component */ "./src/app/components/board-view/leader-boards/user-leader-board.component.ts");
+/* harmony import */ var _leader_boards_commit_leader_board_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./leader-boards/commit-leader-board.component */ "./src/app/components/board-view/leader-boards/commit-leader-board.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -599,12 +633,14 @@ var BoardViewModule = /** @class */ (function () {
             declarations: [
                 _board_view_component__WEBPACK_IMPORTED_MODULE_5__["BoardViewComponent"],
                 _commit_feed_commit_feed_component__WEBPACK_IMPORTED_MODULE_6__["CommitFeedComponent"],
-                _leader_board_leader_board_component__WEBPACK_IMPORTED_MODULE_7__["LeaderBoardComponent"],
+                _leader_boards_user_leader_board_component__WEBPACK_IMPORTED_MODULE_7__["UserLeaderBoardComponent"],
+                _leader_boards_commit_leader_board_component__WEBPACK_IMPORTED_MODULE_8__["CommitLeaderBoardComponent"],
             ],
             exports: [
                 _board_view_component__WEBPACK_IMPORTED_MODULE_5__["BoardViewComponent"],
                 _commit_feed_commit_feed_component__WEBPACK_IMPORTED_MODULE_6__["CommitFeedComponent"],
-                _leader_board_leader_board_component__WEBPACK_IMPORTED_MODULE_7__["LeaderBoardComponent"],
+                _leader_boards_user_leader_board_component__WEBPACK_IMPORTED_MODULE_7__["UserLeaderBoardComponent"],
+                _leader_boards_commit_leader_board_component__WEBPACK_IMPORTED_MODULE_8__["CommitLeaderBoardComponent"],
             ],
         })
     ], BoardViewModule);
@@ -622,7 +658,7 @@ var BoardViewModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#commit-feed {\r\n  .display: block;\r\n  max-height: 80%;\r\n  max-width: 90%;\r\n  height: 940px;\r\n  width: 90%;\r\n  padding: 10px;\r\n  border-spacing: 10 10;\r\n  background: #0C1E28;\r\n  overflow-y: auto;\r\n  border-style: solid;\r\n  border-width: 10px;\r\n  border-color: #0C1E28;\r\n\r\n}\r\n\r\ntable {\r\n  width: 100%;\r\n  border-spacing: 0 0;\r\n  background: #213B4C;\r\n  color: white;\r\n  box-shadow: 0 0 20px #1E3344;\r\n  overflow: hidden;\r\n  padding: 10px;\r\n  margin: 5px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.metric-table {\r\n  background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  text-align: left;\r\n  padding: 5px 10px 5px 10px;\r\n\r\n}\r\n\r\ntd {\r\n  border: 1px ;\r\n  text-align: left;\r\n  padding: 2px 10px 2px 10px;\r\n}\r\n\r\nthead {\r\n background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  padding: 10px 10px 20px 10px;\r\n  text-align: center;\r\n  font-size: 20px;\r\n}\r\n\r\n.commit-points {\r\n  padding: 10px 10px 10px 10px;\r\n  text-align: center;\r\n  background: green;\r\n  font-size: 20px;\r\n}\r\n\r\nfa-icon {\r\n  padding: 10px 10px 10px 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2NvbW1pdC1mZWVkL2NvbW1pdC1mZWVkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLGVBQWU7RUFDZixjQUFjO0VBQ2QsV0FBVztFQUNYLGNBQWM7RUFDZCxzQkFBc0I7RUFDdEIsb0JBQW9CO0VBQ3BCLGlCQUFpQjtFQUNqQixvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLHNCQUFzQjs7Q0FFdkI7O0FBRUQ7RUFDRSxZQUFZO0VBQ1osb0JBQW9CO0VBQ3BCLG9CQUFvQjtFQUNwQixhQUFhO0VBQ2IsNkJBQTZCO0VBQzdCLGlCQUFpQjtFQUNqQixjQUFjO0VBQ2QsWUFBWTtFQUNaLG9CQUFvQjtDQUNyQjs7QUFFRDtFQUNFLG9CQUFvQjtFQUNwQixhQUFhO0VBQ2IsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQiwyQkFBMkI7O0NBRTVCOztBQUVEO0VBQ0UsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQiwyQkFBMkI7Q0FDNUI7O0FBRUQ7Q0FDQyxvQkFBb0I7RUFDbkIsYUFBYTtFQUNiLGFBQWE7RUFDYiw2QkFBNkI7RUFDN0IsbUJBQW1CO0VBQ25CLGdCQUFnQjtDQUNqQjs7QUFFRDtFQUNFLDZCQUE2QjtFQUM3QixtQkFBbUI7RUFDbkIsa0JBQWtCO0VBQ2xCLGdCQUFnQjtDQUNqQjs7QUFFRDtFQUNFLDZCQUE2QjtDQUM5QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYm9hcmQtdmlldy9jb21taXQtZmVlZC9jb21taXQtZmVlZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2NvbW1pdC1mZWVkIHtcclxuICAuZGlzcGxheTogYmxvY2s7XHJcbiAgbWF4LWhlaWdodDogODAlO1xyXG4gIG1heC13aWR0aDogOTAlO1xyXG4gIGhlaWdodDogOTQwcHg7XHJcbiAgd2lkdGg6IDkwJTtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIGJvcmRlci1zcGFjaW5nOiAxMCAxMDtcclxuICBiYWNrZ3JvdW5kOiAjMEMxRTI4O1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbiAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcclxuICBib3JkZXItd2lkdGg6IDEwcHg7XHJcbiAgYm9yZGVyLWNvbG9yOiAjMEMxRTI4O1xyXG5cclxufVxyXG5cclxudGFibGUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJvcmRlci1zcGFjaW5nOiAwIDA7XHJcbiAgYmFja2dyb3VuZDogIzIxM0I0QztcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgYm94LXNoYWRvdzogMCAwIDIwcHggIzFFMzM0NDtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgbWFyZ2luOiA1cHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxufVxyXG5cclxuLm1ldHJpYy10YWJsZSB7XHJcbiAgYmFja2dyb3VuZDogIzBDMUUyODtcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgbWFyZ2luOiAxMHB4O1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgcGFkZGluZzogNXB4IDEwcHggNXB4IDEwcHg7XHJcblxyXG59XHJcblxyXG50ZCB7XHJcbiAgYm9yZGVyOiAxcHggO1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgcGFkZGluZzogMnB4IDEwcHggMnB4IDEwcHg7XHJcbn1cclxuXHJcbnRoZWFkIHtcclxuIGJhY2tncm91bmQ6ICMwQzFFMjg7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIG1hcmdpbjogMTBweDtcclxuICBwYWRkaW5nOiAxMHB4IDEwcHggMjBweCAxMHB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBmb250LXNpemU6IDIwcHg7XHJcbn1cclxuXHJcbi5jb21taXQtcG9pbnRzIHtcclxuICBwYWRkaW5nOiAxMHB4IDEwcHggMTBweCAxMHB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kOiBncmVlbjtcclxuICBmb250LXNpemU6IDIwcHg7XHJcbn1cclxuXHJcbmZhLWljb24ge1xyXG4gIHBhZGRpbmc6IDEwcHggMTBweCAxMHB4IDEwcHg7XHJcbn1cclxuIl19 */"
+module.exports = "#commit-feed {\r\n  .display: block;\r\n  text-align: center;\r\n  margin: 2%;\r\n  margin-top: 5px;\r\n  max-height: 50%;\r\n  height: 400px;\r\n  padding: 10px;\r\n  border-spacing: 10 10;\r\n  background: #0C1E28;\r\n  overflow-y: auto;\r\n  border-style: solid;\r\n  border-width: 10px;\r\n  border-color: #0C1E28;\r\n\r\n}\r\n\r\ntable {\r\n  width: 100%;\r\n  border-spacing: 0 0;\r\n  background: #213B4C;\r\n  color: white;\r\n  box-shadow: 0 0 20px #1E3344;\r\n  overflow: hidden;\r\n  padding: 10px;\r\n  margin: 5px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.metric-table {\r\n  background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  text-align: left;\r\n  padding: 5px 10px 5px 10px;\r\n\r\n}\r\n\r\ntd {\r\n  border: 1px ;\r\n  text-align: left;\r\n  padding: 2px 10px 2px 10px;\r\n}\r\n\r\nthead {\r\n background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  padding: 10px 10px 20px 10px;\r\n  text-align: center;\r\n  font-size: 20px;\r\n}\r\n\r\n.commit-points {\r\n  padding: 10px 10px 10px 10px;\r\n  text-align: center;\r\n  background: green;\r\n  font-size: 20px;\r\n}\r\n\r\nfa-icon {\r\n  padding: 10px 10px 10px 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2NvbW1pdC1mZWVkL2NvbW1pdC1mZWVkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLGNBQWM7RUFDZCxjQUFjO0VBQ2Qsc0JBQXNCO0VBQ3RCLG9CQUFvQjtFQUNwQixpQkFBaUI7RUFDakIsb0JBQW9CO0VBQ3BCLG1CQUFtQjtFQUNuQixzQkFBc0I7O0NBRXZCOztBQUVEO0VBQ0UsWUFBWTtFQUNaLG9CQUFvQjtFQUNwQixvQkFBb0I7RUFDcEIsYUFBYTtFQUNiLDZCQUE2QjtFQUM3QixpQkFBaUI7RUFDakIsY0FBYztFQUNkLFlBQVk7RUFDWixvQkFBb0I7Q0FDckI7O0FBRUQ7RUFDRSxvQkFBb0I7RUFDcEIsYUFBYTtFQUNiLGFBQWE7RUFDYixpQkFBaUI7RUFDakIsMkJBQTJCOztDQUU1Qjs7QUFFRDtFQUNFLGFBQWE7RUFDYixpQkFBaUI7RUFDakIsMkJBQTJCO0NBQzVCOztBQUVEO0NBQ0Msb0JBQW9CO0VBQ25CLGFBQWE7RUFDYixhQUFhO0VBQ2IsNkJBQTZCO0VBQzdCLG1CQUFtQjtFQUNuQixnQkFBZ0I7Q0FDakI7O0FBRUQ7RUFDRSw2QkFBNkI7RUFDN0IsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQixnQkFBZ0I7Q0FDakI7O0FBRUQ7RUFDRSw2QkFBNkI7Q0FDOUIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2JvYXJkLXZpZXcvY29tbWl0LWZlZWQvY29tbWl0LWZlZWQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNjb21taXQtZmVlZCB7XHJcbiAgLmRpc3BsYXk6IGJsb2NrO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBtYXJnaW46IDIlO1xyXG4gIG1hcmdpbi10b3A6IDVweDtcclxuICBtYXgtaGVpZ2h0OiA1MCU7XHJcbiAgaGVpZ2h0OiA0MDBweDtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIGJvcmRlci1zcGFjaW5nOiAxMCAxMDtcclxuICBiYWNrZ3JvdW5kOiAjMEMxRTI4O1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbiAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcclxuICBib3JkZXItd2lkdGg6IDEwcHg7XHJcbiAgYm9yZGVyLWNvbG9yOiAjMEMxRTI4O1xyXG5cclxufVxyXG5cclxudGFibGUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJvcmRlci1zcGFjaW5nOiAwIDA7XHJcbiAgYmFja2dyb3VuZDogIzIxM0I0QztcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgYm94LXNoYWRvdzogMCAwIDIwcHggIzFFMzM0NDtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgbWFyZ2luOiA1cHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxufVxyXG5cclxuLm1ldHJpYy10YWJsZSB7XHJcbiAgYmFja2dyb3VuZDogIzBDMUUyODtcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgbWFyZ2luOiAxMHB4O1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgcGFkZGluZzogNXB4IDEwcHggNXB4IDEwcHg7XHJcblxyXG59XHJcblxyXG50ZCB7XHJcbiAgYm9yZGVyOiAxcHggO1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgcGFkZGluZzogMnB4IDEwcHggMnB4IDEwcHg7XHJcbn1cclxuXHJcbnRoZWFkIHtcclxuIGJhY2tncm91bmQ6ICMwQzFFMjg7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIG1hcmdpbjogMTBweDtcclxuICBwYWRkaW5nOiAxMHB4IDEwcHggMjBweCAxMHB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBmb250LXNpemU6IDIwcHg7XHJcbn1cclxuXHJcbi5jb21taXQtcG9pbnRzIHtcclxuICBwYWRkaW5nOiAxMHB4IDEwcHggMTBweCAxMHB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kOiBncmVlbjtcclxuICBmb250LXNpemU6IDIwcHg7XHJcbn1cclxuXHJcbmZhLWljb24ge1xyXG4gIHBhZGRpbmc6IDEwcHggMTBweCAxMHB4IDEwcHg7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -633,7 +669,7 @@ module.exports = "#commit-feed {\r\n  .display: block;\r\n  max-height: 80%;\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"commit-feed\">\n  <table *ngFor=\"let commitElement of commitElements\" class=\"commit-feed-element\" class=\"table table-striped table-sm\">\n    <thead>\n    <tr>\n      <th colspan=\"5\">{{commitElement.currentCommit.name}}</th>\n    </tr>\n    <tr>\n      <th colspan=\"2\"><fa-icon [icon]=\"faUser\"></fa-icon>{{commitElement.currentCommit.author}}</th>\n      <th colspan=\"3\"><fa-icon [icon]=\"faCalendarAlt\"></fa-icon>{{commitElement.date}}</th>\n    </tr>\n    </thead>\n    <tr class=\"metric-table\" *ngIf=\"commitElement.tableRows!=0\">\n      <th>Veränderte Metriken</th>\n      <th id=\"second-commit-id\">Vorher</th>\n      <th id=\"first-commit-id\">Nachher</th>\n      <th>Änderung</th>\n      <th>Punkte</th>\n    </tr>\n    <tbody>\n    <tr *ngFor=\"let row of commitElement.tableRows\" class=\"commit-metric-data\">\n      <td>{{row.metricName}}</td>\n      <td>{{row.previousCommitValue}}</td>\n      <td>{{row.currentCommitValue}}</td>\n      <td>\n        <fa-icon *ngIf=\"!row.metricValueDown\" [icon]=\"faCaretUp\"></fa-icon>\n        <fa-icon *ngIf=\"row.metricValueDown\" [icon]=\"faCaretDown\"></fa-icon>\n        {{row.difference}}\n      </td>\n      <td>{{row.points}}</td>\n    </tr>\n    <tr>\n      <td colspan=\"5\" class=\"commit-points\" *ngIf=\"commitElement.totalPoints>0\">\n        <fa-icon [icon]=\"faSquare\"></fa-icon>\n        {{commitElement.totalPoints}}\n        <fa-icon [icon]=\"faPlusSquare\"></fa-icon>\n      </td>\n    </tr>\n    </tbody>\n  </table>\n</div>\n"
+module.exports = "<div id=\"commit-feed\">\n  <table *ngFor=\"let commitElement of formattedCommitElements\" class=\"commit-feed-element\" class=\"table table-striped table-sm\">\n    <thead>\n    <tr>\n      <th colspan=\"5\">{{commitElement.currentCommit.name}}</th>\n    </tr>\n    <tr>\n      <th colspan=\"2\"><fa-icon [icon]=\"faUser\"></fa-icon>{{commitElement.currentCommit.author}}</th>\n      <th colspan=\"3\"><fa-icon [icon]=\"faCalendarAlt\"></fa-icon>{{commitElement.date}}</th>\n    </tr>\n    </thead>\n    <tr class=\"metric-table\" *ngIf=\"commitElement.tableRows!=0\">\n      <th>Veränderte Metriken</th>\n      <th id=\"second-commit-id\">Vorher</th>\n      <th id=\"first-commit-id\">Nachher</th>\n      <th>Änderung</th>\n      <th>Punkte</th>\n    </tr>\n    <tbody>\n    <tr *ngFor=\"let row of commitElement.tableRows\" class=\"commit-metric-data\">\n      <td>{{row.metricName}}</td>\n      <td>{{row.previousCommitValue}}</td>\n      <td>{{row.currentCommitValue}}</td>\n      <td>\n        <fa-icon *ngIf=\"!row.metricValueDown\" [icon]=\"faCaretUp\"></fa-icon>\n        <fa-icon *ngIf=\"row.metricValueDown\" [icon]=\"faCaretDown\"></fa-icon>\n        {{row.difference}}\n      </td>\n      <td>{{row.points}}</td>\n    </tr>\n    <tr>\n      <td colspan=\"5\" class=\"commit-points\" *ngIf=\"commitElement.totalPoints>0\">\n        <fa-icon [icon]=\"faPlusSquare\"></fa-icon>\n        {{commitElement.totalPoints}}\n        <fa-icon [icon]=\"faPlusSquare\"></fa-icon>\n      </td>\n    </tr>\n    </tbody>\n  </table>\n</div>\n"
 
 /***/ }),
 
@@ -673,8 +709,13 @@ var CommitFeedComponent = /** @class */ (function () {
         this.faSortAmountUp = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faSortAmountUp"];
     }
     CommitFeedComponent.prototype.ngOnChanges = function () {
-        var _this = this;
-        this.commitElements.sort(function (a, b) { return b.currentCommit.timestamp - a.currentCommit.timestamp; }).filter(function (commitElement) { return commitElement.currentCommit.timestamp > Date.now() - _this.activeFilter; });
+        this.formattedCommitElements = [];
+        for (var i = 0; i < this.commitElements.length; i++) {
+            if (this.commitElements[i].currentCommit.timestamp > (Date.now() - this.activeFilter)) {
+                this.formattedCommitElements.push(this.commitElements[i]);
+                this.formattedCommitElements.sort(function (a, b) { return b.currentCommit.timestamp - a.currentCommit.timestamp; });
+            }
+        }
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -699,40 +740,28 @@ var CommitFeedComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/board-view/leader-board/leader-board.component.css":
-/*!*******************************************************************************!*\
-  !*** ./src/app/components/board-view/leader-board/leader-board.component.css ***!
-  \*******************************************************************************/
+/***/ "./src/app/components/board-view/leader-boards/commit-leader-board.component.html":
+/*!****************************************************************************************!*\
+  !*** ./src/app/components/board-view/leader-boards/commit-leader-board.component.html ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#leader-board {\r\n  .display: block;\r\n  max-height: 80%;\r\n  max-width: 90%;\r\n  height: 940px;\r\n  width: 90%;\r\n  padding: 10px;\r\n  border-spacing: 10 10;\r\n  background: #0C1E28;\r\n  overflow-y: auto;\r\n  border-style: solid;\r\n  border-width: 10px;\r\n  border-color: #0C1E28;\r\n\r\n}\r\n\r\n.even { background-color: #213B4C; }\r\n\r\n.odd { background-color: #0C1E28; }\r\n\r\n.first { background-color: green; }\r\n\r\ntable {\r\n  width: 80%;\r\n  border-spacing: 0 0;\r\n  background: #213B4C;\r\n  color: white;\r\n  box-shadow: 0 0 20px #1E3344;\r\n  overflow: hidden;\r\n  padding: 10px;\r\n  margin: 50px;\r\n  margin-top: 5px;\r\n  margin-bottom: 0px;\r\n}\r\n\r\nth {\r\n  font-size: 30px;\r\n  background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  padding: 0;\r\n  text-align: left;\r\n  padding: 20px 10px 20px 10px;\r\n\r\n}\r\n\r\ntd {\r\n  border: 1px ;\r\n  text-align: left;\r\n  padding: 20px 10px 20px 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2xlYWRlci1ib2FyZC9sZWFkZXItYm9hcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGNBQWM7RUFDZCxXQUFXO0VBQ1gsY0FBYztFQUNkLHNCQUFzQjtFQUN0QixvQkFBb0I7RUFDcEIsaUJBQWlCO0VBQ2pCLG9CQUFvQjtFQUNwQixtQkFBbUI7RUFDbkIsc0JBQXNCOztDQUV2Qjs7QUFFRCxRQUFRLDBCQUEwQixFQUFFOztBQUNwQyxPQUFPLDBCQUEwQixFQUFFOztBQUNuQyxTQUFTLHdCQUF3QixFQUFFOztBQUVuQztFQUNFLFdBQVc7RUFDWCxvQkFBb0I7RUFDcEIsb0JBQW9CO0VBQ3BCLGFBQWE7RUFDYiw2QkFBNkI7RUFDN0IsaUJBQWlCO0VBQ2pCLGNBQWM7RUFDZCxhQUFhO0VBQ2IsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtDQUNwQjs7QUFFRDtFQUNFLGdCQUFnQjtFQUNoQixvQkFBb0I7RUFDcEIsYUFBYTtFQUNiLGFBQWE7RUFDYixXQUFXO0VBQ1gsaUJBQWlCO0VBQ2pCLDZCQUE2Qjs7Q0FFOUI7O0FBRUQ7RUFDRSxhQUFhO0VBQ2IsaUJBQWlCO0VBQ2pCLDZCQUE2QjtDQUM5QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYm9hcmQtdmlldy9sZWFkZXItYm9hcmQvbGVhZGVyLWJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjbGVhZGVyLWJvYXJkIHtcclxuICAuZGlzcGxheTogYmxvY2s7XHJcbiAgbWF4LWhlaWdodDogODAlO1xyXG4gIG1heC13aWR0aDogOTAlO1xyXG4gIGhlaWdodDogOTQwcHg7XHJcbiAgd2lkdGg6IDkwJTtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIGJvcmRlci1zcGFjaW5nOiAxMCAxMDtcclxuICBiYWNrZ3JvdW5kOiAjMEMxRTI4O1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbiAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcclxuICBib3JkZXItd2lkdGg6IDEwcHg7XHJcbiAgYm9yZGVyLWNvbG9yOiAjMEMxRTI4O1xyXG5cclxufVxyXG5cclxuLmV2ZW4geyBiYWNrZ3JvdW5kLWNvbG9yOiAjMjEzQjRDOyB9XHJcbi5vZGQgeyBiYWNrZ3JvdW5kLWNvbG9yOiAjMEMxRTI4OyB9XHJcbi5maXJzdCB7IGJhY2tncm91bmQtY29sb3I6IGdyZWVuOyB9XHJcblxyXG50YWJsZSB7XHJcbiAgd2lkdGg6IDgwJTtcclxuICBib3JkZXItc3BhY2luZzogMCAwO1xyXG4gIGJhY2tncm91bmQ6ICMyMTNCNEM7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGJveC1zaGFkb3c6IDAgMCAyMHB4ICMxRTMzNDQ7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIG1hcmdpbjogNTBweDtcclxuICBtYXJnaW4tdG9wOiA1cHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMHB4O1xyXG59XHJcblxyXG50aCB7XHJcbiAgZm9udC1zaXplOiAzMHB4O1xyXG4gIGJhY2tncm91bmQ6ICMwQzFFMjg7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIG1hcmdpbjogMTBweDtcclxuICBwYWRkaW5nOiAwO1xyXG4gIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgcGFkZGluZzogMjBweCAxMHB4IDIwcHggMTBweDtcclxuXHJcbn1cclxuXHJcbnRkIHtcclxuICBib3JkZXI6IDFweCA7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICBwYWRkaW5nOiAyMHB4IDEwcHggMjBweCAxMHB4O1xyXG59XHJcbiJdfQ== */"
+module.exports = "<div class=\"leader-board\">\n  <div id=\"leader-board-commits\">\n    <table id=\"commit-leaderboard\" class=\"leader-board-element\" class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th>#</th>\n        <th>Commit</th>\n        <th>User</th>\n        <th>Datum</th>\n        <th>Punkte</th>\n      </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let commitElement of formattedCommitElements; let c = index;\n                    let f = first;\n                    let o= odd; let e=even;\"\n                    [ngClass]=\"{ odd: o, even: e, first: f }\">\n          <td>{{c+1}}</td>\n          <td>{{commitElement.currentCommit.name}}</td>\n          <td>{{commitElement.currentCommit.author}}</td>\n          <td>{{commitElement.date}}</td>\n          <td>{{commitElement.totalPoints}}</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
-/***/ "./src/app/components/board-view/leader-board/leader-board.component.html":
-/*!********************************************************************************!*\
-  !*** ./src/app/components/board-view/leader-board/leader-board.component.html ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"leader-board\">\n  <div id=\"leader-board-users\">\n    <table id=\"user-leaderboard\" class=\"leader-board-element\" class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th>#</th>\n        <th>User</th>\n        <th>Score</th>\n        <th>Bester Commit</th>\n      </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let userElement of formattedUserElements;\n                    let u = index;\n                    let f = first;\n                    let o= odd; let e=even;\"\n                    [ngClass]=\"{ odd: o, even: e, first: f }\">\n          <td>{{u+1}}</td>\n          <td>{{userElement.user}}</td>\n          <td>{{userElement.totalUserPoints}}</td>\n          <td>\n            <tr>{{userElement.bestCommitName}}</tr>\n            <tr>{{userElement.bestCommitDate}}</tr>\n            <tr>{{userElement.bestCommitPoints}} Punkte</tr>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n  <div id=\"leader-board-commits\">\n    <table id=\"commit-leaderboard\" class=\"leader-board-element\" class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th>#</th>\n        <th>Commit</th>\n        <th>User</th>\n        <th>Datum</th>\n        <th>Punkte</th>\n      </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let commitElement of formattedCommitElements; let c = index;\n                    let f = first;\n                    let o= odd; let e=even;\"\n                    [ngClass]=\"{ odd: o, even: e, first: f }\">\n          <td>{{c+1}}</td>\n          <td>{{commitElement.currentCommit.name}}</td>\n          <td>{{commitElement.currentCommit.author}}</td>\n          <td>{{commitElement.date}}</td>\n          <td>{{commitElement.totalPoints}}</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n"
-
-/***/ }),
-
-/***/ "./src/app/components/board-view/leader-board/leader-board.component.ts":
-/*!******************************************************************************!*\
-  !*** ./src/app/components/board-view/leader-board/leader-board.component.ts ***!
-  \******************************************************************************/
-/*! exports provided: LeaderBoardComponent */
+/***/ "./src/app/components/board-view/leader-boards/commit-leader-board.component.ts":
+/*!**************************************************************************************!*\
+  !*** ./src/app/components/board-view/leader-boards/commit-leader-board.component.ts ***!
+  \**************************************************************************************/
+/*! exports provided: CommitLeaderBoardComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeaderBoardComponent", function() { return LeaderBoardComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommitLeaderBoardComponent", function() { return CommitLeaderBoardComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -743,53 +772,152 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-var LeaderBoardComponent = /** @class */ (function () {
-    function LeaderBoardComponent() {
-        this.faCaretDown = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faCaretDown"];
-        this.faCaretUp = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faCaretUp"];
-        this.faPlusSquare = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faPlusSquare"];
-        this.faChevronCircleRight = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faChevronCircleRight"];
-        this.faJedi = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faJedi"];
-        this.faUser = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faUser"];
-        this.faCalendarAlt = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faCalendarAlt"];
-        this.faSquare = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faSquare"];
-        this.faSortAmountUp = _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_1__["faSortAmountUp"];
+var CommitLeaderBoardComponent = /** @class */ (function () {
+    function CommitLeaderBoardComponent() {
     }
-    LeaderBoardComponent.prototype.ngOnChanges = function () {
-        var _this = this;
+    CommitLeaderBoardComponent.prototype.ngOnChanges = function () {
         this.formattedCommitElements = [];
-        console.log(Date.now() - this.activeFilter);
-        this.commitElements.sort(function (a, b) { return b.totalPoints - a.totalPoints; }).filter(function (commitElement) { return commitElement.currentCommit.timestamp > Date.now() - _this.activeFilter; });
-        console.log(this.commitElements);
-        this.formattedUserElements = this.userLeaderboardElements.sort(function (a, b) { return b.totalUserPoints - a.totalUserPoints; });
+        this.commitElements.sort(function (a, b) { return b.totalPoints - a.totalPoints; });
         for (var i = 0; i < 15; i++) {
             if (this.commitElements[i]) {
-                this.formattedCommitElements.push(this.commitElements[i]);
+                if (this.commitElements[i].currentCommit.timestamp > (Date.now() - this.activeFilter)) {
+                    this.formattedCommitElements.push(this.commitElements[i]);
+                }
             }
         }
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Array)
-    ], LeaderBoardComponent.prototype, "commitElements", void 0);
+    ], CommitLeaderBoardComponent.prototype, "commitElements", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Array)
-    ], LeaderBoardComponent.prototype, "userLeaderboardElements", void 0);
+    ], CommitLeaderBoardComponent.prototype, "userElements", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Number)
-    ], LeaderBoardComponent.prototype, "activeFilter", void 0);
-    LeaderBoardComponent = __decorate([
+    ], CommitLeaderBoardComponent.prototype, "activeFilter", void 0);
+    CommitLeaderBoardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'leader-board',
-            template: __webpack_require__(/*! ./leader-board.component.html */ "./src/app/components/board-view/leader-board/leader-board.component.html"),
-            styles: [__webpack_require__(/*! ./leader-board.component.css */ "./src/app/components/board-view/leader-board/leader-board.component.css")]
+            selector: 'commit-leader-board',
+            template: __webpack_require__(/*! ./commit-leader-board.component.html */ "./src/app/components/board-view/leader-boards/commit-leader-board.component.html"),
+            styles: [__webpack_require__(/*! ./leader-board.component.css */ "./src/app/components/board-view/leader-boards/leader-board.component.css")]
         }),
         __metadata("design:paramtypes", [])
-    ], LeaderBoardComponent);
-    return LeaderBoardComponent;
+    ], CommitLeaderBoardComponent);
+    return CommitLeaderBoardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/board-view/leader-boards/leader-board.component.css":
+/*!********************************************************************************!*\
+  !*** ./src/app/components/board-view/leader-boards/leader-board.component.css ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "#leader-board {\r\n  .display: block;\r\n  text-align: center;\r\n  margin: 1%;\r\n  max-height: 80%;\r\n  max-width: 90%;\r\n  height: 940px;\r\n  padding: 10px;\r\n  border-spacing: 10 10;\r\n  background: #0C1E28;\r\n  overflow-y: auto;\r\n  border-style: solid;\r\n  border-width: 10px;\r\n  border-color: #0C1E28;\r\n\r\n}\r\n\r\n.even { background-color: #213B4C; }\r\n\r\n.odd { background-color: #0C1E28; }\r\n\r\n.first { background-color: green; }\r\n\r\ntable {\r\n  width: 96%;\r\n  background: #213B4C;\r\n  color: white;\r\n  box-shadow: 0 0 20px #1E3344;\r\n  overflow: hidden;\r\n  padding: 10px;\r\n  margin: 2%;\r\n  margin-top: 5px;\r\n  margin-bottom: 0px;\r\n}\r\n\r\nth {\r\n  font-size: 30px;\r\n  background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  padding: 0;\r\n  text-align: left;\r\n  padding: 20px 10px 20px 10px;\r\n\r\n}\r\n\r\ntd {\r\n  border: 1px ;\r\n  text-align: left;\r\n  padding: 20px 10px 20px 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2xlYWRlci1ib2FyZHMvbGVhZGVyLWJvYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGNBQWM7RUFDZCxjQUFjO0VBQ2Qsc0JBQXNCO0VBQ3RCLG9CQUFvQjtFQUNwQixpQkFBaUI7RUFDakIsb0JBQW9CO0VBQ3BCLG1CQUFtQjtFQUNuQixzQkFBc0I7O0NBRXZCOztBQUVELFFBQVEsMEJBQTBCLEVBQUU7O0FBQ3BDLE9BQU8sMEJBQTBCLEVBQUU7O0FBQ25DLFNBQVMsd0JBQXdCLEVBQUU7O0FBRW5DO0VBQ0UsV0FBVztFQUNYLG9CQUFvQjtFQUNwQixhQUFhO0VBQ2IsNkJBQTZCO0VBQzdCLGlCQUFpQjtFQUNqQixjQUFjO0VBQ2QsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixtQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxnQkFBZ0I7RUFDaEIsb0JBQW9CO0VBQ3BCLGFBQWE7RUFDYixhQUFhO0VBQ2IsV0FBVztFQUNYLGlCQUFpQjtFQUNqQiw2QkFBNkI7O0NBRTlCOztBQUVEO0VBQ0UsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQiw2QkFBNkI7Q0FDOUIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2JvYXJkLXZpZXcvbGVhZGVyLWJvYXJkcy9sZWFkZXItYm9hcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNsZWFkZXItYm9hcmQge1xyXG4gIC5kaXNwbGF5OiBibG9jaztcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgbWFyZ2luOiAxJTtcclxuICBtYXgtaGVpZ2h0OiA4MCU7XHJcbiAgbWF4LXdpZHRoOiA5MCU7XHJcbiAgaGVpZ2h0OiA5NDBweDtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIGJvcmRlci1zcGFjaW5nOiAxMCAxMDtcclxuICBiYWNrZ3JvdW5kOiAjMEMxRTI4O1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbiAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcclxuICBib3JkZXItd2lkdGg6IDEwcHg7XHJcbiAgYm9yZGVyLWNvbG9yOiAjMEMxRTI4O1xyXG5cclxufVxyXG5cclxuLmV2ZW4geyBiYWNrZ3JvdW5kLWNvbG9yOiAjMjEzQjRDOyB9XHJcbi5vZGQgeyBiYWNrZ3JvdW5kLWNvbG9yOiAjMEMxRTI4OyB9XHJcbi5maXJzdCB7IGJhY2tncm91bmQtY29sb3I6IGdyZWVuOyB9XHJcblxyXG50YWJsZSB7XHJcbiAgd2lkdGg6IDk2JTtcclxuICBiYWNrZ3JvdW5kOiAjMjEzQjRDO1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxuICBib3gtc2hhZG93OiAwIDAgMjBweCAjMUUzMzQ0O1xyXG4gIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgcGFkZGluZzogMTBweDtcclxuICBtYXJnaW46IDIlO1xyXG4gIG1hcmdpbi10b3A6IDVweDtcclxuICBtYXJnaW4tYm90dG9tOiAwcHg7XHJcbn1cclxuXHJcbnRoIHtcclxuICBmb250LXNpemU6IDMwcHg7XHJcbiAgYmFja2dyb3VuZDogIzBDMUUyODtcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgbWFyZ2luOiAxMHB4O1xyXG4gIHBhZGRpbmc6IDA7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICBwYWRkaW5nOiAyMHB4IDEwcHggMjBweCAxMHB4O1xyXG5cclxufVxyXG5cclxudGQge1xyXG4gIGJvcmRlcjogMXB4IDtcclxuICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gIHBhZGRpbmc6IDIwcHggMTBweCAyMHB4IDEwcHg7XHJcbn1cclxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/components/board-view/leader-boards/user-leader-board.component.html":
+/*!**************************************************************************************!*\
+  !*** ./src/app/components/board-view/leader-boards/user-leader-board.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"leader-board\">\n  <div id=\"leader-board-users\">\n    <table id=\"user-leaderboard\" class=\"leader-board-element\" class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th>#</th>\n        <th>User</th>\n        <th>Insgesamte Punktzahl</th>\n        <th>Commits in Zeitraum</th>\n        <th>Durchschnittliche Punktzahl</th>\n        <th>Bester Commit</th>\n      </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let userElement of formattedUserElements;\n                    let u = index;\n                    let f = first;\n                    let o= odd; let e=even;\"\n                    [ngClass]=\"{ odd: o, even: e, first: f }\">\n          <td>{{u+1}}</td>\n          <td>{{userElement.userData.user}}</td>\n          <td>{{userElement.totalUserPoints}}</td>\n          <td>{{userElement.commitCount}}</td>\n          <td>{{userElement.averageUserPoints}}</td>\n          <td>\n            <tr>{{userElement.bestCommitName}}</tr>\n            <tr>{{userElement.bestCommitDate}}</tr>\n            <tr>{{userElement.bestCommitPoints}} Punkte</tr>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/components/board-view/leader-boards/user-leader-board.component.ts":
+/*!************************************************************************************!*\
+  !*** ./src/app/components/board-view/leader-boards/user-leader-board.component.ts ***!
+  \************************************************************************************/
+/*! exports provided: UserLeaderBoardComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserLeaderBoardComponent", function() { return UserLeaderBoardComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UserLeaderBoardComponent = /** @class */ (function () {
+    function UserLeaderBoardComponent() {
+    }
+    UserLeaderBoardComponent.prototype.ngOnChanges = function () {
+        this.formattedUserElements = [];
+        for (var i = 0; i < this.userElements.length; i++) {
+            var totalPointsPerUser = 0;
+            var averagePointsPerUser = 0;
+            var commitsInTimeframe = 0;
+            var bestCommitName = "";
+            var bestCommitDate = "";
+            var bestCommitPoints = 0;
+            if (this.userElements[i].commitsPerUser[0]) {
+                var bestCommitName_1 = this.userElements[i].commitsPerUser[0].currentCommit.name;
+                var bestCommitDate_1 = new Date(this.userElements[i].commitsPerUser[0].currentCommit.timestamp).toLocaleDateString();
+                var bestCommitPoints_1 = this.userElements[i].commitsPerUser[0].totalPoints;
+            }
+            for (var j = 0; j < this.userElements[i].commitsPerUser.length; j++) {
+                if (this.userElements[i].commitsPerUser[j].currentCommit.timestamp > (Date.now() - this.activeFilter)) {
+                    totalPointsPerUser = totalPointsPerUser + this.userElements[i].commitsPerUser[j].totalPoints;
+                    commitsInTimeframe++;
+                    averagePointsPerUser = Math.round(totalPointsPerUser / commitsInTimeframe * 100) / 100;
+                    if (this.userElements[i].commitsPerUser[j].totalPoints > bestCommitPoints) {
+                        bestCommitName = this.userElements[i].commitsPerUser[j].currentCommit.name;
+                        bestCommitDate = this.userElements[i].commitsPerUser[j].date;
+                        bestCommitPoints = this.userElements[i].commitsPerUser[j].totalPoints;
+                    }
+                }
+            }
+            this.formattedUserElements.push({
+                userData: this.userElements[i],
+                totalUserPoints: totalPointsPerUser,
+                averageUserPoints: averagePointsPerUser,
+                commitCount: commitsInTimeframe,
+                bestCommitName: bestCommitName,
+                bestCommitDate: bestCommitDate,
+                bestCommitPoints: bestCommitPoints
+            });
+            this.formattedUserElements = this.formattedUserElements.sort(function (a, b) { return b.averageUserPoints - a.averageUserPoints; });
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Array)
+    ], UserLeaderBoardComponent.prototype, "commitElements", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Array)
+    ], UserLeaderBoardComponent.prototype, "userElements", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Number)
+    ], UserLeaderBoardComponent.prototype, "activeFilter", void 0);
+    UserLeaderBoardComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'user-leader-board',
+            template: __webpack_require__(/*! ./user-leader-board.component.html */ "./src/app/components/board-view/leader-boards/user-leader-board.component.html"),
+            styles: [__webpack_require__(/*! ./leader-board.component.css */ "./src/app/components/board-view/leader-boards/leader-board.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], UserLeaderBoardComponent);
+    return UserLeaderBoardComponent;
 }());
 
 
@@ -857,11 +985,9 @@ var GeneralViewComponent = /** @class */ (function () {
         var _this = this;
         this.setupService.authorizeUser().subscribe(function (loginResultAccessToken) {
             _this.commitService.loadCommits(loginResultAccessToken).subscribe(function (commits) {
-                commits
-                    .filter(function (ICommit) { return ICommit.timestamp > (Date.now() - 2629743000); })
-                    .filter(function (ICommit) { return ICommit.analyzed == true; })
-                    .sort(function (a, b) { return b.timestamp - a.timestamp; });
-                _this.commits = commits;
+                commits.filter(function (ICommit) { return ICommit.analyzed == true; });
+                commits.filter(function (ICommit) { return new Date(ICommit.timestamp).toLocaleDateString() > new Date((Date.now() - 2629743000)).toLocaleDateString(); });
+                _this.commits = commits.sort(function (a, b) { return b.timestamp - a.timestamp; });
             });
             _this.appMetrics = Array.from(new Set(_AppConfig__WEBPACK_IMPORTED_MODULE_4__["AppConfig"].METRIC_NAME_MAPPING));
             //this.metricService.loadAvailableMetrics().subscribe(metrics => this.availableMetrics = metrics);
@@ -945,7 +1071,7 @@ var ViewModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\n  <p>Team-Gamification-App</p>\n</div>\n"
+module.exports = "<div class=\"header\">\n  <p>Gamification-App für adessoAG/budgeteer</p>\n</div>\n"
 
 /***/ }),
 
@@ -1156,8 +1282,8 @@ var CommitService = /** @class */ (function () {
         this.http = http;
     }
     CommitService.prototype.loadCommits = function (accessToken) {
-        console.log("--------LOADING-COMMITS---------");
-        console.log(accessToken);
+        //console.log("--------LOADING-COMMITS---------");
+        //console.log(accessToken);
         return this.http.get(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects/9/commits?page=0&size=999", { headers: { 'Authorization': accessToken } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (result) { return result._embedded.commitResourceList; }));
     };
     CommitService = __decorate([
@@ -1165,6 +1291,47 @@ var CommitService = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], CommitService);
     return CommitService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/service/element.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/service/element.service.ts ***!
+  \********************************************/
+/*! exports provided: ElementService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementService", function() { return ElementService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var ElementService = /** @class */ (function () {
+    function ElementService() {
+        this.userElementsSource = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        this.commitElementsSource = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        this.userElements$ = this.userElementsSource.asObservable();
+        this.commitElements$ = this.commitElementsSource.asObservable();
+    }
+    ElementService.prototype.saveElements = function (userElements, commitElements) {
+        this.userElementsSource.next(userElements);
+        this.commitElementsSource.next(commitElements);
+    };
+    ElementService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()
+    ], ElementService);
+    return ElementService;
 }());
 
 
