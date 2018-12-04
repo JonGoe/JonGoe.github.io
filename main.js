@@ -73,22 +73,22 @@ var AppConfig = /** @class */ (function () {
     // METRIC NAME MAPPING
     AppConfig.METRIC_NAME_MAPPING = [
         {
-            shortName: 'CyclomaticComplexity',
-            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck',
-            pointValue: 10,
-            shortDescription: 'Checks cyclomatic complexity against a specified limit.'
-        },
-        {
-            shortName: 'NPathComplexity',
-            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.metrics.NPathComplexityCheck',
-            pointValue: 1,
-            shortDescription: 'Checks the npath complexity against a specified limit.'
+            shortName: 'ArrayTypeStyle',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.ArrayTypeStyleCheck',
+            pointValue: 5,
+            shortDescription: 'Checks the style of array type definitions.'
         },
         {
             shortName: 'TodoComments',
             metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck',
-            pointValue: 100,
+            pointValue: 15,
             shortDescription: 'A check for TODO comments.'
+        },
+        {
+            shortName: 'TrailingComment',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck',
+            pointValue: 5,
+            shortDescription: 'Check to ensure that comments are the only thing on a line. '
         },
         {
             shortName: 'UncommentedMains',
@@ -97,10 +97,100 @@ var AppConfig = /** @class */ (function () {
             shortDescription: 'Detects uncommented main methods.'
         },
         {
+            shortName: 'UpperEll',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.UpperEllCheck',
+            pointValue: 5,
+            shortDescription: 'Checks that long constants are defined with an upper ell.'
+        },
+        {
+            shortName: 'AnnotationLocation',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationLocationCheck',
+            pointValue: 5,
+            shortDescription: 'Check location of annotation on language elements.'
+        },
+        {
+            shortName: 'MissingOverride',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.MissingOverrideCheck',
+            pointValue: 5,
+            shortDescription: 'Verifies that the Override annotation is present when the inheritDoc javadoc tag is present. '
+        },
+        {
+            shortName: 'AvoidNestedBlocks',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.blocks.AvoidNestedBlocksCheck',
+            pointValue: 10,
+            shortDescription: 'Finds nested blocks.'
+        },
+        {
+            shortName: 'EmptyCatchBlock',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.blocks.EmptyCatchBlockCheck',
+            pointValue: 10,
+            shortDescription: 'Checks for empty catch blocks. '
+        },
+        {
+            shortName: 'LeftCurly',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck',
+            pointValue: 3,
+            shortDescription: 'Checks the placement of left curly braces. '
+        },
+        {
+            shortName: 'NeedBraces',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck',
+            pointValue: 3,
+            shortDescription: 'Checks for braces around code blocks. '
+        },
+        {
+            shortName: 'RightCurly',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck',
+            pointValue: 3,
+            shortDescription: 'Checks the placement of right curly braces. '
+        },
+        {
+            shortName: 'AvoidInlineConditionals',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.AvoidInlineConditionalsCheck',
+            pointValue: 5,
+            shortDescription: 'Detects inline conditionals. '
+        },
+        {
+            shortName: 'CovariantEquals',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.CovariantEqualsCheck',
+            pointValue: 5,
+            shortDescription: 'Checks that if a class defines a covariant method equals, then it defines method equals(java.lang.Object). '
+        },
+        {
+            shortName: 'DeclarationOrder',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck',
+            pointValue: 5,
+            shortDescription: 'Checks that the parts of a class or interface declaration appear in the order suggested by the Code Conventions for the Java Programming Language. '
+        },
+        {
+            shortName: 'DefaultComesLast',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.DefaultComesLastCheck',
+            pointValue: 5,
+            shortDescription: 'Check that the default is after all the cases in a switch statement.'
+        },
+        {
+            shortName: 'EmptyStatement',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.EmptyStatementCheck',
+            pointValue: 3,
+            shortDescription: 'Detects empty statements (standalone ;).  '
+        },
+        {
             shortName: 'EqualsAvoidNull',
             metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.EqualsAvoidNullCheck',
-            pointValue: 50,
+            pointValue: 5,
             shortDescription: 'Checks that any combination of String literals is on the left side of an equals() comparison.'
+        },
+        {
+            shortName: 'ExplicitInitialization',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck',
+            pointValue: 5,
+            shortDescription: 'Checks if any class or object member explicitly initialized to default for its type value.'
+        },
+        {
+            shortName: 'FallThrough',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.FallThroughCheck',
+            pointValue: 10,
+            shortDescription: 'Checks for fall through in switch statements Finds locations where a case contains Java code - but lacks a break, return, throw or continue statement.'
         },
         {
             shortName: 'FinalLocalVariable',
@@ -121,16 +211,58 @@ var AppConfig = /** @class */ (function () {
             shortDescription: 'Catching java.lang.Exception, java.lang.Error or java.lang.RuntimeException is almost never acceptable.'
         },
         {
+            shortName: 'IllegalThrows',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.IllegalThrowsCheck',
+            pointValue: 15,
+            shortDescription: 'Throwing java.lang.Error or java.lang.RuntimeException is almost never acceptable. '
+        },
+        {
             shortName: 'MagicNumber',
             metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck',
-            pointValue: 15,
+            pointValue: 5,
             shortDescription: 'Checks for magic numbers.'
+        },
+        {
+            shortName: 'MissingSwitchDefault',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.MissingSwitchDefaultCheck',
+            pointValue: 5,
+            shortDescription: 'Checks that switch statement has "default" clause.'
         },
         {
             shortName: 'MultipleStringLiterals',
             metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.MultipleStringLiteralsCheck',
-            pointValue: 10,
+            pointValue: 5,
             shortDescription: 'Checks for multiple occurrences of the same string literal within a single file.'
+        },
+        {
+            shortName: 'MultipleVariableDeclarations',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.MultipleVariableDeclarationsCheck',
+            pointValue: 5,
+            shortDescription: 'Checks that each variable declaration is in its own statement and on its own line. '
+        },
+        {
+            shortName: 'NestedForDepth',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.NestedForDepthCheck',
+            pointValue: 5,
+            shortDescription: 'Check the number of nested for -statements. '
+        },
+        {
+            shortName: 'NestedIfDepth',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck',
+            pointValue: 5,
+            shortDescription: 'Restricts nested if-else blocks to a specified depth (default = 1).'
+        },
+        {
+            shortName: 'NestedTryDepth',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.NestedTryDepthCheck',
+            pointValue: 5,
+            shortDescription: 'Restricts nested try-catch-finally blocks to a specified depth (default = 1). '
+        },
+        {
+            shortName: 'OneStatementPerLine',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.OneStatementPerLineCheck',
+            pointValue: 5,
+            shortDescription: 'Restricts the number of statements per line to one. '
         },
         {
             shortName: 'OverloadMethodsDeclarationOrder',
@@ -141,8 +273,20 @@ var AppConfig = /** @class */ (function () {
         {
             shortName: 'ReturnCount',
             metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck',
-            pointValue: 10,
+            pointValue: 5,
             shortDescription: ' Restricts return statements to a specified count (default = 2).'
+        },
+        {
+            shortName: 'SimplifyBooleanExpression',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.SimplifyBooleanExpressionCheck',
+            pointValue: 10,
+            shortDescription: 'Checks for overly complicated boolean expressions. '
+        },
+        {
+            shortName: 'SimplifyBooleanReturn',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.SimplifyBooleanReturnCheck',
+            pointValue: 10,
+            shortDescription: 'Checks for overly complicated boolean return statements. '
         },
         {
             shortName: 'VariableDeclarationUsageDistance',
@@ -151,10 +295,28 @@ var AppConfig = /** @class */ (function () {
             shortDescription: 'Checks the distance between declaration of variable and its first usage.'
         },
         {
+            shortName: 'DesignForExtension',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck',
+            pointValue: 5,
+            shortDescription: 'The check finds classes that are designed for extension (subclass creation).'
+        },
+        {
             shortName: 'HideUtilityClassConstructor',
             metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck',
             pointValue: 5,
             shortDescription: 'Make sure that utility classes (classes that contain only static methods) do not have a public constructor.'
+        },
+        {
+            shortName: 'OneTopLevelClass',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.design.OneTopLevelClassCheck',
+            pointValue: 5,
+            shortDescription: 'Checks that each top-level class, interface or enum resides in a source file of its own.'
+        },
+        {
+            shortName: 'VisibilityModifier',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck',
+            pointValue: 5,
+            shortDescription: 'Checks visibility of class members. '
         },
         {
             shortName: 'AvoidStarImport',
@@ -169,47 +331,72 @@ var AppConfig = /** @class */ (function () {
             shortDescription: 'Check that finds static imports.'
         },
         {
+            shortName: 'RedundantImports',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.RedundantImportCheck',
+            pointValue: 5,
+            shortDescription: 'Checks for imports that are redundant. '
+        },
+        {
             shortName: 'UnusedImports',
             metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck',
-            pointValue: 10,
+            pointValue: 5,
             shortDescription: 'Checks for unused import statements.'
         },
         {
+            shortName: 'Indentation',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck',
+            pointValue: 5,
+            shortDescription: 'Checks the style of array type definitions.'
+        },
+        {
+            shortName: 'CommentsIndentation',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck',
+            pointValue: 5,
+            shortDescription: 'Checks the style of array type definitions.'
+        },
+        {
+            shortName: 'BooleanExpressionComplexity',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.metrics.BooleanExpressionComplexityCheck',
+            pointValue: 1,
+            shortDescription: 'Restricts nested boolean operators (&&, ||, &, | and ^) to a specified depth (default = 3). '
+        },
+        {
+            shortName: 'CyclomaticComplexity',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck',
+            pointValue: 1,
+            shortDescription: 'Checks cyclomatic complexity against a specified limit.'
+        },
+        {
+            shortName: 'RedundantModifier',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck',
+            pointValue: 5,
+            shortDescription: 'Checks for redundant modifiers in interface and annotation definitions.'
+        },
+        {
+            shortName: 'AbbreviationAsWordInName',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck',
+            pointValue: 5,
+            shortDescription: 'The Check validate abbreviations(consecutive capital letters) length in identifier name, it also allow in enforce camel case naming.'
+        },
+        {
             shortName: 'AbstractClassName',
-            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.name.AbstractClassNameCheck',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.naming.AbstractClassNameCheck',
             pointValue: 5,
             shortDescription: 'Ensures that the names of abstract classes conforming to some regular expression and check that abstract modifier exists. '
         },
         {
-            shortName: 'LineLength',
-            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck',
-            pointValue: 5,
-            shortDescription: 'Checks for long lines.'
+            shortName: 'ExecutableStatementCount',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.sizes.ExecutableStatementCountCheck',
+            pointValue: 1,
+            shortDescription: 'Restricts the number of executable statements to a specified limit (default = 30).'
+        },
+        {
+            shortName: 'GenericWhitespace',
+            metricName: 'checkstyle:com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck',
+            pointValue: 1,
+            shortDescription: 'Checks that the whitespace around the Generic tokens are correct to the typical convention.'
         },
     ];
-    // VISUALIZATION SETTINGS
-    AppConfig.EDGE_LENGTH_FACTOR = 2;
-    AppConfig.HEIGHT_FACTOR = 0.1;
-    // static GLOBAL_MAX_GROUND_AREA = 100;
-    // static GLOBAL_MIN_GROUND_AREA = 1;
-    // static GLOBAL_MAX_HEIGHT = 100;
-    // static GLOBAL_MIN_HEIGHT = 1;
-    AppConfig.BLOCK_SPACING = 5;
-    AppConfig.MODULE_BLOCK_HEIGHT = 5;
-    // CAMERA SETTINGS
-    AppConfig.CAMERA_NEAR = 0.1;
-    AppConfig.CAMERA_FAR = 100000;
-    AppConfig.CAMERA_DISTANCE_TO_FOCUSSED_ELEMENT = 100;
-    AppConfig.CAMERA_ANIMATION_DURATION = 1500;
-    // COLORS
-    AppConfig.COLOR_HIERARCHY_RANGE = ['#cccccc', '#525252'];
-    AppConfig.COLOR_HEATMAP_RANGE = ['#ffffff', '#ffc905', '#f78400', '#e92100', '#9b1909', '#4f1609', '#5d0000'];
-    AppConfig.COLOR_CONNECTION = '#000000';
-    AppConfig.COLOR_FIRST_COMMIT = '#0e8cf3';
-    AppConfig.COLOR_SECOND_COMMIT = '#ffb100';
-    AppConfig.COLOR_ADDED_FILE = '#49c35c';
-    AppConfig.COLOR_DELETED_FILE = '#d90206';
-    AppConfig.COLOR_UNCHANGED_FILE = '#cccccc';
     return AppConfig;
 }());
 
@@ -383,7 +570,7 @@ module.exports = ".choose-time-filter {\r\n   background: #213B4C;\r\n   border:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"ICommitElements.length == commits.length-1\n              && IUserElements\n              && activeTimeFilterValue\n            else loadingScreen\">\n  <div class=\"choose-time-filter\">\n    <input type=\"radio\" id=\"radio-today\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"86400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-today\" title=\"Heute\">1 Tag</label>\n    <input type=\"radio\" id=\"radio-3-days\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"259200000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-3-days\" title=\"Diese 3 Tage\">3 Tage</label>\n    <input type=\"radio\" id=\"radio-week\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"604800000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-week\" title=\"Diese Woche\">7 Tage</label>\n    <input type=\"radio\" id=\"radio-2-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1209600000\" [(ngModel)]=\"activeTimeFilterValue\" />\n    <label class=\"custom-control-label\" for=\"radio-2-weeks\" title=\"Diese 2 Wochen\">2 Wochen</label>\n    <input type=\"radio\" id=\"radio-3-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1814400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-3-weeks\" title=\"Diese 3 Wochen\">3 Wochen</label>\n    <input type=\"radio\" id=\"radio-month\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"2629743000\" [(ngModel)]=\"activeTimeFilterValue\"/>\n    <label class=\"custom-control-label\" for=\"radio-month\" title=\"Dieser Monat\">1 Monat</label>\n  </div>\n  <div class=\"choose-board\">\n    <input type=\"radio\" id=\"radio-commit-feed\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitFeed'\" [(ngModel)]=\"selectedBoard\"/>\n    <label class=\"custom-control-label\" for=\"radio-commit-feed\" title=\"Alle Commits\">Alle Commits</label>\n    <input type=\"radio\" id=\"radio-commit-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\n    <label class=\"custom-control-label\" for=\"radio-commit-leaderboard\" title=\"Beste Commits\">Beste Commits</label>\n    <input type=\"radio\" id=\"radio-user-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectUserLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\n    <label class=\"custom-control-label\" for=\"radio-user-leaderboard\" title=\"Beste User\">Beste User</label>\n  </div>\n</div>\n<div class=\"board-container\" *ngIf=\"ICommitElements.length > 1\n                                      && IUserElements\n                                      && activeTimeFilterValue\n                                      && selectedBoard\">\n  <div class=\"user-leader-board-container\" *ngIf=\"selectedBoard == 'selectUserLeaderboard' \">\n    <user-leader-board\n      [userElements]=\"IUserElements\"\n      [commitElements]=\"ICommitElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </user-leader-board>\n  </div>\n  <div class=\"commit-leader-board-container\" *ngIf=\"selectedBoard == 'selectCommitLeaderboard' \">\n    <commit-leader-board\n      [userElements]=\"IUserElements\"\n      [commitElements]=\"ICommitElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </commit-leader-board>\n  </div>\n  <div class=\"commit-feed-container\" *ngIf=\"selectedBoard == 'selectCommitFeed' \">\n    <commit-feed\n      [commitElements]=\"ICommitElements\"\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\n    </commit-feed>\n  </div>\n</div>\n<ng-template #loadingScreen>\n  <loading-screen\n    [loadingIterator]=\"ICommitElements.length\"\n    [loadingElements]=\"commits.length-1\">\n  </loading-screen>\n</ng-template>\n\n"
+module.exports = "<div *ngIf=\"ICommitElements.length == commits.length-1\r\n              && IUserElements\r\n              && activeTimeFilterValue\r\n            else loadingScreen\">\r\n  <div class=\"choose-time-filter\">\r\n    <input type=\"radio\" id=\"radio-today\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"86400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-today\" title=\"Heute\">1 Tag</label>\r\n    <input type=\"radio\" id=\"radio-3-days\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"259200000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-3-days\" title=\"Diese 3 Tage\">3 Tage</label>\r\n    <input type=\"radio\" id=\"radio-week\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"604800000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-week\" title=\"Diese Woche\">7 Tage</label>\r\n    <input type=\"radio\" id=\"radio-2-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1209600000\" [(ngModel)]=\"activeTimeFilterValue\" />\r\n    <label class=\"custom-control-label\" for=\"radio-2-weeks\" title=\"Diese 2 Wochen\">2 Wochen</label>\r\n    <input type=\"radio\" id=\"radio-3-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1814400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-3-weeks\" title=\"Diese 3 Wochen\">3 Wochen</label>\r\n    <input type=\"radio\" id=\"radio-month\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"2629743000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-month\" title=\"Dieser Monat\">1 Monat</label>\r\n  </div>\r\n  <div class=\"choose-board\">\r\n    <input type=\"radio\" id=\"radio-commit-feed\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitFeed'\" [(ngModel)]=\"selectedBoard\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-commit-feed\" title=\"Alle Commits\">Alle Commits</label>\r\n    <input type=\"radio\" id=\"radio-commit-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-commit-leaderboard\" title=\"Beste Commits\">Beste Commits</label>\r\n    <input type=\"radio\" id=\"radio-user-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectUserLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-user-leaderboard\" title=\"Beste User\">Beste User</label>\r\n  </div>\r\n</div>\r\n<div class=\"board-container\" *ngIf=\"ICommitElements.length > 1\r\n                                      && IUserElements\r\n                                      && activeTimeFilterValue\r\n                                      && selectedBoard\">\r\n  <div class=\"user-leader-board-container\" *ngIf=\"selectedBoard == 'selectUserLeaderboard' \">\r\n    <user-leader-board\r\n      [userElements]=\"IUserElements\"\r\n      [commitElements]=\"ICommitElements\"\r\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\r\n    </user-leader-board>\r\n  </div>\r\n  <div class=\"commit-leader-board-container\" *ngIf=\"selectedBoard == 'selectCommitLeaderboard' \">\r\n    <commit-leader-board\r\n      [userElements]=\"IUserElements\"\r\n      [commitElements]=\"ICommitElements\"\r\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\r\n    </commit-leader-board>\r\n  </div>\r\n  <div class=\"commit-feed-container\" *ngIf=\"selectedBoard == 'selectCommitFeed' \">\r\n    <commit-feed\r\n      [commitElements]=\"ICommitElements\"\r\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\r\n    </commit-feed>\r\n  </div>\r\n</div>\r\n<ng-template #loadingScreen>\r\n  <loading-screen\r\n    [loadingIterator]=\"ICommitElements.length\"\r\n    [loadingElements]=\"commits.length-1\">\r\n  </loading-screen>\r\n</ng-template>\r\n\r\n"
 
 /***/ }),
 
@@ -448,7 +635,7 @@ var BoardViewComponent = /** @class */ (function () {
             var _loop_1 = function () {
                 var deltaTree;
                 var tableRows = [];
-                var totalCommitPoints = 0;
+                var totalCommitPoints = 20;
                 var currentCommit = _this.commits[i];
                 var previousCommit = _this.commits[i + 1];
                 //console.log(previousCommit);
@@ -516,6 +703,7 @@ var BoardViewComponent = /** @class */ (function () {
                     metricValueDown = true;
                 }
                 else {
+                    points = -1 * difference;
                     difference = difference * -1;
                     metricValueDown = false;
                 }
@@ -669,7 +857,7 @@ module.exports = "#commit-feed {\r\n  .display: block;\r\n  text-align: center;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"commit-feed\">\n  <table *ngFor=\"let commitElement of formattedCommitElements\" class=\"commit-feed-element\" class=\"table table-striped table-sm\">\n    <thead>\n    <tr>\n      <th colspan=\"5\">{{commitElement.currentCommit.name}}</th>\n    </tr>\n    <tr>\n      <th colspan=\"2\"><fa-icon [icon]=\"faUser\"></fa-icon>{{commitElement.currentCommit.author}}</th>\n      <th colspan=\"3\"><fa-icon [icon]=\"faCalendarAlt\"></fa-icon>{{commitElement.date}}</th>\n    </tr>\n    </thead>\n    <tr class=\"metric-table\" *ngIf=\"commitElement.tableRows!=0\">\n      <th>Veränderte Metriken</th>\n      <th id=\"second-commit-id\">Vorher</th>\n      <th id=\"first-commit-id\">Nachher</th>\n      <th>Änderung</th>\n      <th>Punkte</th>\n    </tr>\n    <tbody>\n    <tr *ngFor=\"let row of commitElement.tableRows\" class=\"commit-metric-data\">\n      <td>{{row.metricName}}</td>\n      <td>{{row.previousCommitValue}}</td>\n      <td>{{row.currentCommitValue}}</td>\n      <td>\n        <fa-icon *ngIf=\"!row.metricValueDown\" [icon]=\"faCaretUp\"></fa-icon>\n        <fa-icon *ngIf=\"row.metricValueDown\" [icon]=\"faCaretDown\"></fa-icon>\n        {{row.difference}}\n      </td>\n      <td>{{row.points}}</td>\n    </tr>\n    <tr>\n      <td colspan=\"5\" class=\"commit-points\" *ngIf=\"commitElement.totalPoints>0\">\n        <fa-icon [icon]=\"faPlusSquare\"></fa-icon>\n        {{commitElement.totalPoints}}\n        <fa-icon [icon]=\"faPlusSquare\"></fa-icon>\n      </td>\n    </tr>\n    </tbody>\n  </table>\n</div>\n"
+module.exports = "<div id=\"commit-feed\">\r\n  <table *ngFor=\"let commitElement of formattedCommitElements\" class=\"commit-feed-element\" class=\"table table-striped table-sm\">\r\n    <thead>\r\n    <tr>\r\n      <th colspan=\"5\">{{commitElement.currentCommit.name}}</th>\r\n    </tr>\r\n    <tr>\r\n      <th colspan=\"2\"><fa-icon [icon]=\"faUser\"></fa-icon>{{commitElement.currentCommit.author}}</th>\r\n      <th colspan=\"3\"><fa-icon [icon]=\"faCalendarAlt\"></fa-icon>{{commitElement.date}}</th>\r\n    </tr>\r\n    </thead>\r\n    <tr class=\"metric-table\" *ngIf=\"commitElement.tableRows!=0\">\r\n      <th>Veränderte Metriken</th>\r\n      <th id=\"second-commit-id\">Vorher</th>\r\n      <th id=\"first-commit-id\">Nachher</th>\r\n      <th>Änderung</th>\r\n      <th>Zusätzliche Punkte</th>\r\n    </tr>\r\n    <tbody>\r\n    <tr *ngFor=\"let row of commitElement.tableRows\" class=\"commit-metric-data\">\r\n      <td>{{row.metricName}}</td>\r\n      <td>{{row.previousCommitValue}}</td>\r\n      <td>{{row.currentCommitValue}}</td>\r\n      <td>\r\n        <fa-icon *ngIf=\"!row.metricValueDown\" [icon]=\"faCaretUp\"></fa-icon>\r\n        <fa-icon *ngIf=\"row.metricValueDown\" [icon]=\"faCaretDown\"></fa-icon>\r\n        {{row.difference}}\r\n      </td>\r\n      <td>{{row.points}}</td>\r\n    </tr>\r\n    <tr>\r\n      <td colspan=\"5\" class=\"commit-points\" *ngIf=\"commitElement.totalPoints>0\">\r\n        <fa-icon [icon]=\"faPlusSquare\"></fa-icon>\r\n        {{commitElement.totalPoints}}\r\n        <fa-icon [icon]=\"faPlusSquare\"></fa-icon>\r\n      </td>\r\n    </tr>\r\n    </tbody>\r\n  </table>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -747,7 +935,7 @@ var CommitFeedComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"leader-board\">\n  <div id=\"leader-board-commits\">\n    <table id=\"commit-leaderboard\" class=\"leader-board-element\" class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th>#</th>\n        <th>Commit</th>\n        <th>User</th>\n        <th>Datum</th>\n        <th>Punkte</th>\n      </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let commitElement of formattedCommitElements; let c = index;\n                    let f = first;\n                    let o= odd; let e=even;\"\n                    [ngClass]=\"{ odd: o, even: e, first: f }\">\n          <td>{{c+1}}</td>\n          <td>{{commitElement.currentCommit.name}}</td>\n          <td>{{commitElement.currentCommit.author}}</td>\n          <td>{{commitElement.date}}</td>\n          <td>{{commitElement.totalPoints}}</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"leader-board\">\r\n  <div id=\"leader-board-commits\">\r\n    <table id=\"commit-leaderboard\" class=\"leader-board-element\" class=\"table table-striped table-sm\">\r\n      <thead>\r\n      <tr>\r\n        <th>#</th>\r\n        <th>Commit</th>\r\n        <th>User</th>\r\n        <th>Datum</th>\r\n        <th>Punkte</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let commitElement of formattedCommitElements; let c = index;\r\n                    let f = first;\r\n                    let o= odd; let e=even;\"\r\n                    [ngClass]=\"{ odd: o, even: e, first: f }\">\r\n          <td>{{c+1}}</td>\r\n          <td>{{commitElement.currentCommit.name}}</td>\r\n          <td>{{commitElement.currentCommit.author}}</td>\r\n          <td>{{commitElement.date}}</td>\r\n          <td>{{commitElement.totalPoints}}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -820,7 +1008,7 @@ var CommitLeaderBoardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#leader-board {\r\n  .display: block;\r\n  text-align: center;\r\n  margin: 1%;\r\n  max-height: 80%;\r\n  max-width: 90%;\r\n  height: 940px;\r\n  padding: 10px;\r\n  border-spacing: 10 10;\r\n  background: #0C1E28;\r\n  overflow-y: auto;\r\n  border-style: solid;\r\n  border-width: 10px;\r\n  border-color: #0C1E28;\r\n\r\n}\r\n\r\n.even { background-color: #213B4C; }\r\n\r\n.odd { background-color: #0C1E28; }\r\n\r\n.first { background-color: green; }\r\n\r\ntable {\r\n  width: 96%;\r\n  background: #213B4C;\r\n  color: white;\r\n  box-shadow: 0 0 20px #1E3344;\r\n  overflow: hidden;\r\n  padding: 10px;\r\n  margin: 2%;\r\n  margin-top: 5px;\r\n  margin-bottom: 0px;\r\n}\r\n\r\nth {\r\n  font-size: 30px;\r\n  background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  padding: 0;\r\n  text-align: left;\r\n  padding: 20px 10px 20px 10px;\r\n\r\n}\r\n\r\ntd {\r\n  border: 1px ;\r\n  text-align: left;\r\n  padding: 20px 10px 20px 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2xlYWRlci1ib2FyZHMvbGVhZGVyLWJvYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGNBQWM7RUFDZCxjQUFjO0VBQ2Qsc0JBQXNCO0VBQ3RCLG9CQUFvQjtFQUNwQixpQkFBaUI7RUFDakIsb0JBQW9CO0VBQ3BCLG1CQUFtQjtFQUNuQixzQkFBc0I7O0NBRXZCOztBQUVELFFBQVEsMEJBQTBCLEVBQUU7O0FBQ3BDLE9BQU8sMEJBQTBCLEVBQUU7O0FBQ25DLFNBQVMsd0JBQXdCLEVBQUU7O0FBRW5DO0VBQ0UsV0FBVztFQUNYLG9CQUFvQjtFQUNwQixhQUFhO0VBQ2IsNkJBQTZCO0VBQzdCLGlCQUFpQjtFQUNqQixjQUFjO0VBQ2QsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixtQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxnQkFBZ0I7RUFDaEIsb0JBQW9CO0VBQ3BCLGFBQWE7RUFDYixhQUFhO0VBQ2IsV0FBVztFQUNYLGlCQUFpQjtFQUNqQiw2QkFBNkI7O0NBRTlCOztBQUVEO0VBQ0UsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQiw2QkFBNkI7Q0FDOUIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2JvYXJkLXZpZXcvbGVhZGVyLWJvYXJkcy9sZWFkZXItYm9hcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNsZWFkZXItYm9hcmQge1xyXG4gIC5kaXNwbGF5OiBibG9jaztcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgbWFyZ2luOiAxJTtcclxuICBtYXgtaGVpZ2h0OiA4MCU7XHJcbiAgbWF4LXdpZHRoOiA5MCU7XHJcbiAgaGVpZ2h0OiA5NDBweDtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIGJvcmRlci1zcGFjaW5nOiAxMCAxMDtcclxuICBiYWNrZ3JvdW5kOiAjMEMxRTI4O1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbiAgYm9yZGVyLXN0eWxlOiBzb2xpZDtcclxuICBib3JkZXItd2lkdGg6IDEwcHg7XHJcbiAgYm9yZGVyLWNvbG9yOiAjMEMxRTI4O1xyXG5cclxufVxyXG5cclxuLmV2ZW4geyBiYWNrZ3JvdW5kLWNvbG9yOiAjMjEzQjRDOyB9XHJcbi5vZGQgeyBiYWNrZ3JvdW5kLWNvbG9yOiAjMEMxRTI4OyB9XHJcbi5maXJzdCB7IGJhY2tncm91bmQtY29sb3I6IGdyZWVuOyB9XHJcblxyXG50YWJsZSB7XHJcbiAgd2lkdGg6IDk2JTtcclxuICBiYWNrZ3JvdW5kOiAjMjEzQjRDO1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxuICBib3gtc2hhZG93OiAwIDAgMjBweCAjMUUzMzQ0O1xyXG4gIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgcGFkZGluZzogMTBweDtcclxuICBtYXJnaW46IDIlO1xyXG4gIG1hcmdpbi10b3A6IDVweDtcclxuICBtYXJnaW4tYm90dG9tOiAwcHg7XHJcbn1cclxuXHJcbnRoIHtcclxuICBmb250LXNpemU6IDMwcHg7XHJcbiAgYmFja2dyb3VuZDogIzBDMUUyODtcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgbWFyZ2luOiAxMHB4O1xyXG4gIHBhZGRpbmc6IDA7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICBwYWRkaW5nOiAyMHB4IDEwcHggMjBweCAxMHB4O1xyXG5cclxufVxyXG5cclxudGQge1xyXG4gIGJvcmRlcjogMXB4IDtcclxuICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gIHBhZGRpbmc6IDIwcHggMTBweCAyMHB4IDEwcHg7XHJcbn1cclxuIl19 */"
+module.exports = "#leader-board {\r\n  .display: block;\r\n  text-align: center;\r\n  margin: 1%;\r\n  max-height: 80%;\r\n  max-width: 90%;\r\n  height: 940px;\r\n  padding: 10px;\r\n  border-spacing: 10 10;\r\n  background: #0C1E28;\r\n  overflow-y: auto;\r\n  border-style: solid;\r\n  border-width: 10px;\r\n  border-color: #0C1E28;\r\n\r\n}\r\n\r\n.even { background-color: #213B4C; }\r\n\r\n.odd { background-color: #0C1E28; }\r\n\r\n.first { background-color: green; }\r\n\r\n.best-commit-per-user{ text-align: left; }\r\n\r\ntable {\r\n  width: 96%;\r\n  background: #213B4C;\r\n  color: white;\r\n  box-shadow: 0 0 20px #1E3344;\r\n  overflow: hidden;\r\n  padding: 10px;\r\n  margin: 2%;\r\n  margin-top: 5px;\r\n  margin-bottom: 0px;\r\n}\r\n\r\nth {\r\n  font-size: 30px;\r\n  background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  padding: 0;\r\n  text-align: center;\r\n  padding: 20px 10px 20px 10px;\r\n\r\n}\r\n\r\ntd {\r\n  border: 1px ;\r\n  text-align: center;\r\n  padding: 20px 10px 20px 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2xlYWRlci1ib2FyZHMvbGVhZGVyLWJvYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGNBQWM7RUFDZCxjQUFjO0VBQ2Qsc0JBQXNCO0VBQ3RCLG9CQUFvQjtFQUNwQixpQkFBaUI7RUFDakIsb0JBQW9CO0VBQ3BCLG1CQUFtQjtFQUNuQixzQkFBc0I7O0NBRXZCOztBQUVELFFBQVEsMEJBQTBCLEVBQUU7O0FBQ3BDLE9BQU8sMEJBQTBCLEVBQUU7O0FBQ25DLFNBQVMsd0JBQXdCLEVBQUU7O0FBRW5DLHVCQUF1QixpQkFBaUIsRUFBRTs7QUFFMUM7RUFDRSxXQUFXO0VBQ1gsb0JBQW9CO0VBQ3BCLGFBQWE7RUFDYiw2QkFBNkI7RUFDN0IsaUJBQWlCO0VBQ2pCLGNBQWM7RUFDZCxXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtDQUNwQjs7QUFFRDtFQUNFLGdCQUFnQjtFQUNoQixvQkFBb0I7RUFDcEIsYUFBYTtFQUNiLGFBQWE7RUFDYixXQUFXO0VBQ1gsbUJBQW1CO0VBQ25CLDZCQUE2Qjs7Q0FFOUI7O0FBRUQ7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLDZCQUE2QjtDQUM5QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYm9hcmQtdmlldy9sZWFkZXItYm9hcmRzL2xlYWRlci1ib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2xlYWRlci1ib2FyZCB7XHJcbiAgLmRpc3BsYXk6IGJsb2NrO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBtYXJnaW46IDElO1xyXG4gIG1heC1oZWlnaHQ6IDgwJTtcclxuICBtYXgtd2lkdGg6IDkwJTtcclxuICBoZWlnaHQ6IDk0MHB4O1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgYm9yZGVyLXNwYWNpbmc6IDEwIDEwO1xyXG4gIGJhY2tncm91bmQ6ICMwQzFFMjg7XHJcbiAgb3ZlcmZsb3cteTogYXV0bztcclxuICBib3JkZXItc3R5bGU6IHNvbGlkO1xyXG4gIGJvcmRlci13aWR0aDogMTBweDtcclxuICBib3JkZXItY29sb3I6ICMwQzFFMjg7XHJcblxyXG59XHJcblxyXG4uZXZlbiB7IGJhY2tncm91bmQtY29sb3I6ICMyMTNCNEM7IH1cclxuLm9kZCB7IGJhY2tncm91bmQtY29sb3I6ICMwQzFFMjg7IH1cclxuLmZpcnN0IHsgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW47IH1cclxuXHJcbi5iZXN0LWNvbW1pdC1wZXItdXNlcnsgdGV4dC1hbGlnbjogbGVmdDsgfVxyXG5cclxudGFibGUge1xyXG4gIHdpZHRoOiA5NiU7XHJcbiAgYmFja2dyb3VuZDogIzIxM0I0QztcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgYm94LXNoYWRvdzogMCAwIDIwcHggIzFFMzM0NDtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgbWFyZ2luOiAyJTtcclxuICBtYXJnaW4tdG9wOiA1cHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMHB4O1xyXG59XHJcblxyXG50aCB7XHJcbiAgZm9udC1zaXplOiAzMHB4O1xyXG4gIGJhY2tncm91bmQ6ICMwQzFFMjg7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIG1hcmdpbjogMTBweDtcclxuICBwYWRkaW5nOiAwO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBwYWRkaW5nOiAyMHB4IDEwcHggMjBweCAxMHB4O1xyXG5cclxufVxyXG5cclxudGQge1xyXG4gIGJvcmRlcjogMXB4IDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMjBweCAxMHB4IDIwcHggMTBweDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -831,7 +1019,7 @@ module.exports = "#leader-board {\r\n  .display: block;\r\n  text-align: center;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"leader-board\">\n  <div id=\"leader-board-users\">\n    <table id=\"user-leaderboard\" class=\"leader-board-element\" class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th>#</th>\n        <th>User</th>\n        <th>Insgesamte Punktzahl</th>\n        <th>Commits in Zeitraum</th>\n        <th>Durchschnittliche Punktzahl</th>\n        <th>Bester Commit</th>\n      </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let userElement of formattedUserElements;\n                    let u = index;\n                    let f = first;\n                    let o= odd; let e=even;\"\n                    [ngClass]=\"{ odd: o, even: e, first: f }\">\n          <td>{{u+1}}</td>\n          <td>{{userElement.userData.user}}</td>\n          <td>{{userElement.totalUserPoints}}</td>\n          <td>{{userElement.commitCount}}</td>\n          <td>{{userElement.averageUserPoints}}</td>\n          <td>\n            <tr>{{userElement.bestCommitName}}</tr>\n            <tr>{{userElement.bestCommitDate}}</tr>\n            <tr>{{userElement.bestCommitPoints}} Punkte</tr>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"leader-board\">\r\n  <div id=\"leader-board-users\">\r\n    <table id=\"user-leaderboard\" class=\"leader-board-element\" class=\"table table-striped table-sm\">\r\n      <thead>\r\n      <tr>\r\n        <th>#</th>\r\n        <th>User</th>\r\n        <th>Insgesamte Punktzahl</th>\r\n        <th>Commits in Zeitraum</th>\r\n        <th>Durchschnittliche Punktzahl</th>\r\n        <th>Bester Commit</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let userElement of formattedUserElements;\r\n                    let u = index;\r\n                    let f = first;\r\n                    let o= odd; let e=even;\"\r\n                    [ngClass]=\"{ odd: o, even: e, first: f }\">\r\n          <td>{{u+1}}</td>\r\n          <td>{{userElement.userData.user}}</td>\r\n          <td>{{userElement.totalUserPoints}}</td>\r\n          <td>{{userElement.commitCount}}</td>\r\n          <td>{{userElement.averageUserPoints}}</td>\r\n          <td class=\"best-commit-per-user\">\r\n            <tr>{{userElement.bestCommitName}}</tr>\r\n            <tr>{{userElement.bestCommitDate}}</tr>\r\n            <tr>{{userElement.bestCommitPoints}} Punkte</tr>\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -877,7 +1065,6 @@ var UserLeaderBoardComponent = /** @class */ (function () {
                 if (this.userElements[i].commitsPerUser[j].currentCommit.timestamp > (Date.now() - this.activeFilter)) {
                     totalPointsPerUser = totalPointsPerUser + this.userElements[i].commitsPerUser[j].totalPoints;
                     commitsInTimeframe++;
-                    averagePointsPerUser = Math.round(totalPointsPerUser / commitsInTimeframe * 100) / 100;
                     if (this.userElements[i].commitsPerUser[j].totalPoints > bestCommitPoints) {
                         bestCommitName = this.userElements[i].commitsPerUser[j].currentCommit.name;
                         bestCommitDate = this.userElements[i].commitsPerUser[j].date;
@@ -1071,7 +1258,7 @@ var ViewModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\n  <p>Gamification-App für adessoAG/budgeteer</p>\n</div>\n"
+module.exports = "<div class=\"header\">\r\n  <p>Gamification-App für adessoAG/budgeteer</p>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1134,7 +1321,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"preloader\">\n  <div>\n    {{loadingIterator}} von {{loadingElements}} Commits ausgewertet...\n  </div>\n  <ng-template #ladeAllgemein><div>Commits werden geladen...</div></ng-template>\n  <span class=\"line line-1\"></span>\n  <span class=\"line line-2\"></span>\n  <span class=\"line line-3\"></span>\n  <span class=\"line line-4\"></span>\n  <span class=\"line line-5\"></span>\n  <span class=\"line line-6\"></span>\n  <span class=\"line line-7\"></span>\n  <span class=\"line line-8\"></span>\n  <span class=\"line line-9\"></span>\n</div>\n"
+module.exports = "<div class=\"preloader\">\r\n  <div>\r\n    {{loadingIterator}} von {{loadingElements}} Commits ausgewertet...\r\n  </div>\r\n  <ng-template #ladeAllgemein><div>Commits werden geladen...</div></ng-template>\r\n  <span class=\"line line-1\"></span>\r\n  <span class=\"line line-2\"></span>\r\n  <span class=\"line line-3\"></span>\r\n  <span class=\"line line-4\"></span>\r\n  <span class=\"line line-5\"></span>\r\n  <span class=\"line line-6\"></span>\r\n  <span class=\"line line-7\"></span>\r\n  <span class=\"line line-8\"></span>\r\n  <span class=\"line line-9\"></span>\r\n</div>\r\n"
 
 /***/ }),
 
