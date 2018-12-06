@@ -749,7 +749,6 @@ var BoardViewComponent = /** @class */ (function () {
                     metricValueDown = true;
                 }
                 else {
-                    points = -1 * difference;
                     difference = difference * -1;
                     metricValueDown = false;
                 }
@@ -1054,7 +1053,7 @@ var CommitLeaderBoardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#leader-board {\r\n  .display: block;\r\n  text-align: center;\r\n  margin: 1%;\r\n  max-height: 80%;\r\n  max-width: 90%;\r\n  height: 940px;\r\n  padding: 10px;\r\n  border-spacing: 10 10;\r\n  background: #0C1E28;\r\n  overflow-y: auto;\r\n  border-style: solid;\r\n  border-width: 10px;\r\n  border-color: #0C1E28;\r\n\r\n}\r\n\r\n.even { background-color: #213B4C; }\r\n\r\n.odd { background-color: #0C1E28; }\r\n\r\n.first { background-color: green; }\r\n\r\n.best-commit-per-user{ text-align: left; }\r\n\r\ntable {\r\n  width: 96%;\r\n  background: #213B4C;\r\n  color: white;\r\n  box-shadow: 0 0 20px #1E3344;\r\n  overflow: hidden;\r\n  padding: 10px;\r\n  margin: 2%;\r\n  margin-top: 5px;\r\n  margin-bottom: 0px;\r\n}\r\n\r\nth {\r\n  font-size: 24px;\r\n  background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  padding: 0;\r\n  text-align: center;\r\n  padding: 20px 10px 20px 10px;\r\n\r\n}\r\n\r\ntd {\r\n  border: 1px ;\r\n  text-align: center;\r\n  padding: 20px 10px 20px 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2xlYWRlci1ib2FyZHMvbGVhZGVyLWJvYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGNBQWM7RUFDZCxjQUFjO0VBQ2Qsc0JBQXNCO0VBQ3RCLG9CQUFvQjtFQUNwQixpQkFBaUI7RUFDakIsb0JBQW9CO0VBQ3BCLG1CQUFtQjtFQUNuQixzQkFBc0I7O0NBRXZCOztBQUVELFFBQVEsMEJBQTBCLEVBQUU7O0FBQ3BDLE9BQU8sMEJBQTBCLEVBQUU7O0FBQ25DLFNBQVMsd0JBQXdCLEVBQUU7O0FBRW5DLHVCQUF1QixpQkFBaUIsRUFBRTs7QUFFMUM7RUFDRSxXQUFXO0VBQ1gsb0JBQW9CO0VBQ3BCLGFBQWE7RUFDYiw2QkFBNkI7RUFDN0IsaUJBQWlCO0VBQ2pCLGNBQWM7RUFDZCxXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtDQUNwQjs7QUFFRDtFQUNFLGdCQUFnQjtFQUNoQixvQkFBb0I7RUFDcEIsYUFBYTtFQUNiLGFBQWE7RUFDYixXQUFXO0VBQ1gsbUJBQW1CO0VBQ25CLDZCQUE2Qjs7Q0FFOUI7O0FBRUQ7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLDZCQUE2QjtDQUM5QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYm9hcmQtdmlldy9sZWFkZXItYm9hcmRzL2xlYWRlci1ib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2xlYWRlci1ib2FyZCB7XHJcbiAgLmRpc3BsYXk6IGJsb2NrO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBtYXJnaW46IDElO1xyXG4gIG1heC1oZWlnaHQ6IDgwJTtcclxuICBtYXgtd2lkdGg6IDkwJTtcclxuICBoZWlnaHQ6IDk0MHB4O1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgYm9yZGVyLXNwYWNpbmc6IDEwIDEwO1xyXG4gIGJhY2tncm91bmQ6ICMwQzFFMjg7XHJcbiAgb3ZlcmZsb3cteTogYXV0bztcclxuICBib3JkZXItc3R5bGU6IHNvbGlkO1xyXG4gIGJvcmRlci13aWR0aDogMTBweDtcclxuICBib3JkZXItY29sb3I6ICMwQzFFMjg7XHJcblxyXG59XHJcblxyXG4uZXZlbiB7IGJhY2tncm91bmQtY29sb3I6ICMyMTNCNEM7IH1cclxuLm9kZCB7IGJhY2tncm91bmQtY29sb3I6ICMwQzFFMjg7IH1cclxuLmZpcnN0IHsgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW47IH1cclxuXHJcbi5iZXN0LWNvbW1pdC1wZXItdXNlcnsgdGV4dC1hbGlnbjogbGVmdDsgfVxyXG5cclxudGFibGUge1xyXG4gIHdpZHRoOiA5NiU7XHJcbiAgYmFja2dyb3VuZDogIzIxM0I0QztcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgYm94LXNoYWRvdzogMCAwIDIwcHggIzFFMzM0NDtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgbWFyZ2luOiAyJTtcclxuICBtYXJnaW4tdG9wOiA1cHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMHB4O1xyXG59XHJcblxyXG50aCB7XHJcbiAgZm9udC1zaXplOiAyNHB4O1xyXG4gIGJhY2tncm91bmQ6ICMwQzFFMjg7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIG1hcmdpbjogMTBweDtcclxuICBwYWRkaW5nOiAwO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBwYWRkaW5nOiAyMHB4IDEwcHggMjBweCAxMHB4O1xyXG5cclxufVxyXG5cclxudGQge1xyXG4gIGJvcmRlcjogMXB4IDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMjBweCAxMHB4IDIwcHggMTBweDtcclxufVxyXG4iXX0= */"
+module.exports = "#leader-board {\r\n  .display: block;\r\n  text-align: center;\r\n  margin: 1%;\r\n  max-width: 90%;\r\n  max-height: 50%;\r\n  height: 500px;\r\n  padding: 10px;\r\n  border-spacing: 10 10;\r\n  background: #0C1E28;\r\n  overflow-y: auto;\r\n  border-style: solid;\r\n  border-width: 10px;\r\n  border-color: #0C1E28;\r\n\r\n}\r\n\r\n.even { background-color: #213B4C; }\r\n\r\n.odd { background-color: #0C1E28; }\r\n\r\n.first { background-color: green; }\r\n\r\n.best-commit-per-user{ text-align: left; }\r\n\r\ntable {\r\n  width: 96%;\r\n  background: #213B4C;\r\n  color: white;\r\n  box-shadow: 0 0 20px #1E3344;\r\n  overflow: hidden;\r\n  padding: 10px;\r\n  margin: 2%;\r\n  margin-top: 5px;\r\n  margin-bottom: 0px;\r\n}\r\n\r\nth {\r\n  font-size: 24px;\r\n  background: #0C1E28;\r\n  border: none;\r\n  margin: 10px;\r\n  padding: 0;\r\n  text-align: center;\r\n  padding: 20px 10px 20px 10px;\r\n\r\n}\r\n\r\ntd {\r\n  border: 1px ;\r\n  text-align: center;\r\n  padding: 20px 10px 20px 10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ib2FyZC12aWV3L2xlYWRlci1ib2FyZHMvbGVhZGVyLWJvYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLFdBQVc7RUFDWCxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLGNBQWM7RUFDZCxjQUFjO0VBQ2Qsc0JBQXNCO0VBQ3RCLG9CQUFvQjtFQUNwQixpQkFBaUI7RUFDakIsb0JBQW9CO0VBQ3BCLG1CQUFtQjtFQUNuQixzQkFBc0I7O0NBRXZCOztBQUVELFFBQVEsMEJBQTBCLEVBQUU7O0FBQ3BDLE9BQU8sMEJBQTBCLEVBQUU7O0FBQ25DLFNBQVMsd0JBQXdCLEVBQUU7O0FBRW5DLHVCQUF1QixpQkFBaUIsRUFBRTs7QUFFMUM7RUFDRSxXQUFXO0VBQ1gsb0JBQW9CO0VBQ3BCLGFBQWE7RUFDYiw2QkFBNkI7RUFDN0IsaUJBQWlCO0VBQ2pCLGNBQWM7RUFDZCxXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtDQUNwQjs7QUFFRDtFQUNFLGdCQUFnQjtFQUNoQixvQkFBb0I7RUFDcEIsYUFBYTtFQUNiLGFBQWE7RUFDYixXQUFXO0VBQ1gsbUJBQW1CO0VBQ25CLDZCQUE2Qjs7Q0FFOUI7O0FBRUQ7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLDZCQUE2QjtDQUM5QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYm9hcmQtdmlldy9sZWFkZXItYm9hcmRzL2xlYWRlci1ib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2xlYWRlci1ib2FyZCB7XHJcbiAgLmRpc3BsYXk6IGJsb2NrO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBtYXJnaW46IDElO1xyXG4gIG1heC13aWR0aDogOTAlO1xyXG4gIG1heC1oZWlnaHQ6IDUwJTtcclxuICBoZWlnaHQ6IDUwMHB4O1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgYm9yZGVyLXNwYWNpbmc6IDEwIDEwO1xyXG4gIGJhY2tncm91bmQ6ICMwQzFFMjg7XHJcbiAgb3ZlcmZsb3cteTogYXV0bztcclxuICBib3JkZXItc3R5bGU6IHNvbGlkO1xyXG4gIGJvcmRlci13aWR0aDogMTBweDtcclxuICBib3JkZXItY29sb3I6ICMwQzFFMjg7XHJcblxyXG59XHJcblxyXG4uZXZlbiB7IGJhY2tncm91bmQtY29sb3I6ICMyMTNCNEM7IH1cclxuLm9kZCB7IGJhY2tncm91bmQtY29sb3I6ICMwQzFFMjg7IH1cclxuLmZpcnN0IHsgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW47IH1cclxuXHJcbi5iZXN0LWNvbW1pdC1wZXItdXNlcnsgdGV4dC1hbGlnbjogbGVmdDsgfVxyXG5cclxudGFibGUge1xyXG4gIHdpZHRoOiA5NiU7XHJcbiAgYmFja2dyb3VuZDogIzIxM0I0QztcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgYm94LXNoYWRvdzogMCAwIDIwcHggIzFFMzM0NDtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gIHBhZGRpbmc6IDEwcHg7XHJcbiAgbWFyZ2luOiAyJTtcclxuICBtYXJnaW4tdG9wOiA1cHg7XHJcbiAgbWFyZ2luLWJvdHRvbTogMHB4O1xyXG59XHJcblxyXG50aCB7XHJcbiAgZm9udC1zaXplOiAyNHB4O1xyXG4gIGJhY2tncm91bmQ6ICMwQzFFMjg7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIG1hcmdpbjogMTBweDtcclxuICBwYWRkaW5nOiAwO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBwYWRkaW5nOiAyMHB4IDEwcHggMjBweCAxMHB4O1xyXG5cclxufVxyXG5cclxudGQge1xyXG4gIGJvcmRlcjogMXB4IDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMjBweCAxMHB4IDIwcHggMTBweDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -1118,15 +1117,17 @@ var UserLeaderBoardComponent = /** @class */ (function () {
                     }
                 }
             }
-            this.formattedUserElements.push({
-                userData: this.userElements[i],
-                totalUserPoints: totalPointsPerUser,
-                averageUserPoints: averagePointsPerUser,
-                commitCount: commitsInTimeframe,
-                bestCommitName: bestCommitName,
-                bestCommitDate: bestCommitDate,
-                bestCommitPoints: bestCommitPoints
-            });
+            if (totalPointsPerUser) {
+                this.formattedUserElements.push({
+                    userData: this.userElements[i],
+                    totalUserPoints: totalPointsPerUser,
+                    averageUserPoints: averagePointsPerUser,
+                    commitCount: commitsInTimeframe,
+                    bestCommitName: bestCommitName,
+                    bestCommitDate: bestCommitDate,
+                    bestCommitPoints: bestCommitPoints
+                });
+            }
             this.formattedUserElements = this.formattedUserElements.sort(function (a, b) { return b.averageUserPoints - a.averageUserPoints; });
         }
     };
