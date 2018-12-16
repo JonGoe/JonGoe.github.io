@@ -425,17 +425,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngrx/store-devtools */ "./node_modules/@ngrx/store-devtools/fesm5/store-devtools.js");
-/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_general_view_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/general-view.module */ "./src/app/components/general-view.module.ts");
-/* harmony import */ var _service_commit_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./service/commit.service */ "./src/app/service/commit.service.ts");
-/* harmony import */ var _service_metric_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./service/metric.service */ "./src/app/service/metric.service.ts");
-/* harmony import */ var _service_setup_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./service/setup.service */ "./src/app/service/setup.service.ts");
-/* harmony import */ var _service_element_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./service/element.service */ "./src/app/service/element.service.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "./node_modules/@fortawesome/angular-fontawesome/fesm5/angular-fontawesome.js");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_general_view_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/general-view.module */ "./src/app/components/general-view.module.ts");
+/* harmony import */ var _service_commit_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./service/commit.service */ "./src/app/service/commit.service.ts");
+/* harmony import */ var _service_metric_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./service/metric.service */ "./src/app/service/metric.service.ts");
+/* harmony import */ var _service_setup_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./service/setup.service */ "./src/app/service/setup.service.ts");
+/* harmony import */ var _service_element_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./service/element.service */ "./src/app/service/element.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -456,16 +453,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
-
 var TeamGamificationAppModule = /** @class */ (function () {
     function TeamGamificationAppModule() {
     }
     TeamGamificationAppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -474,19 +468,17 @@ var TeamGamificationAppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_5__["HttpModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"],
-                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_8__["FontAwesomeModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"],
-                _components_general_view_module__WEBPACK_IMPORTED_MODULE_11__["ViewModule"],
-                _environments_environment__WEBPACK_IMPORTED_MODULE_16__["environment"].production ? [] : _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_7__["StoreDevtoolsModule"].instrument({ maxAge: 50 })
+                _fortawesome_angular_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_7__["FlexLayoutModule"],
+                _components_general_view_module__WEBPACK_IMPORTED_MODULE_9__["ViewModule"]
             ],
             providers: [
-                _service_commit_service__WEBPACK_IMPORTED_MODULE_12__["CommitService"],
-                _service_metric_service__WEBPACK_IMPORTED_MODULE_13__["MetricService"],
-                _service_setup_service__WEBPACK_IMPORTED_MODULE_14__["SetupService"],
-                _service_element_service__WEBPACK_IMPORTED_MODULE_15__["ElementService"]
+                _service_commit_service__WEBPACK_IMPORTED_MODULE_10__["CommitService"],
+                _service_metric_service__WEBPACK_IMPORTED_MODULE_11__["MetricService"],
+                _service_setup_service__WEBPACK_IMPORTED_MODULE_12__["SetupService"],
+                _service_element_service__WEBPACK_IMPORTED_MODULE_13__["ElementService"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
         })
     ], TeamGamificationAppModule);
     return TeamGamificationAppModule;
