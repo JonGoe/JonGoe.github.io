@@ -37,7 +37,7 @@ var AppConfig = /** @class */ (function () {
     function AppConfig() {
     }
     AppConfig.getMetricByMetricName = function (metricName) {
-        return this.METRIC_NAME_MAPPING.find(function (namePair) { return namePair.metricName === metricName; });
+        return this.METRICS.find(function (namePair) { return namePair.metricName === metricName; });
     };
     AppConfig.getGithubName = function (commitAuthor) {
         var githubUser = this.USER_NAME_MAPPING.find(function (namePair) { return namePair.personName === commitAuthor; });
@@ -116,8 +116,8 @@ var AppConfig = /** @class */ (function () {
             githubName: 'KilianKrause'
         }
     ];
-    // METRIC NAME MAPPING
-    AppConfig.METRIC_NAME_MAPPING = [
+    // METRICS
+    AppConfig.METRICS = [
         {
             shortName: 'Source Lines of Code (SLOC)',
             metricName: 'coderadar:size:sloc:java',
@@ -506,7 +506,7 @@ module.exports = ".choose-time-filter {\r\n   background: #213B4C;\r\n   border:
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"ICommitElements.length == commits.length-1\r\n              && IUserElements\r\n              && activeTimeFilterValue\r\n            else loadingScreen\">\r\n  <div class=\"choose-time-filter\">\r\n    <input type=\"radio\" id=\"radio-today\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"86400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-today\" title=\"Heute\">1 Tag</label>\r\n    <input type=\"radio\" id=\"radio-3-days\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"259200000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-3-days\" title=\"Diese 3 Tage\">3 Tage</label>\r\n    <input type=\"radio\" id=\"radio-week\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"604800000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-week\" title=\"Diese Woche\">7 Tage</label>\r\n    <input type=\"radio\" id=\"radio-2-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1209600000\" [(ngModel)]=\"activeTimeFilterValue\" />\r\n    <label class=\"custom-control-label\" for=\"radio-2-weeks\" title=\"Diese 2 Wochen\">2 Wochen</label>\r\n    <input type=\"radio\" id=\"radio-3-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1814400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-3-weeks\" title=\"Diese 3 Wochen\">3 Wochen</label>\r\n    <input type=\"radio\" id=\"radio-month\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"2629743000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-month\" title=\"Dieser Monat\">1 Monat</label>\r\n  </div>\r\n  <div class=\"choose-board\">\r\n    <input type=\"radio\" id=\"radio-commit-feed\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitFeed'\" [(ngModel)]=\"selectedBoard\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-commit-feed\" title=\"Alle Commits\">Alle Commits</label>\r\n    <input type=\"radio\" id=\"radio-commit-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-commit-leaderboard\" title=\"Beste Commits\">Beste Commits</label>\r\n    <input type=\"radio\" id=\"radio-user-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectUserLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-user-leaderboard\" title=\"Beste User\">Beste User</label>\r\n  </div>\r\n</div>\r\n<div class=\"board-container\" *ngIf=\"ICommitElements.length > 1\r\n                                      && IUserElements\r\n                                      && activeTimeFilterValue\r\n                                      && selectedBoard\">\r\n  <div class=\"user-leader-board-container\" *ngIf=\"selectedBoard == 'selectUserLeaderboard' \">\r\n    <user-leader-board\r\n      [userElements]=\"IUserElements\"\r\n      [commitElements]=\"ICommitElements\"\r\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\r\n    </user-leader-board>\r\n  </div>\r\n  <div class=\"commit-leader-board-container\" *ngIf=\"selectedBoard == 'selectCommitLeaderboard' \">\r\n    <commit-leader-board\r\n      [userElements]=\"IUserElements\"\r\n      [commitElements]=\"ICommitElements\"\r\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\r\n    </commit-leader-board>\r\n  </div>\r\n  <div class=\"commit-feed-container\" *ngIf=\"selectedBoard == 'selectCommitFeed' \">\r\n    <commit-feed\r\n      [commitElements]=\"ICommitElements\"\r\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\r\n    </commit-feed>\r\n  </div>\r\n</div>\r\n<ng-template #loadingScreen>\r\n  <loading-screen\r\n    [loadingIterator]=\"ICommitElements.length\"\r\n    [loadingElements]=\"commits.length-1\">\r\n  </loading-screen>\r\n</ng-template>\r\n\r\n"
+module.exports = "<div *ngIf=\"ICommitElements.length == commits.length-1\r\n              && IUserElements\r\n              && activeTimeFilterValue\r\n            else loadingScreen\">\r\n  <div class=\"choose-time-filter\">\r\n    <input type=\"radio\" id=\"radio-today\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"86400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-today\" title=\"Heute\">1 Tag</label>\r\n    <input type=\"radio\" id=\"radio-3-days\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"259200000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-3-days\" title=\"Diese 3 Tage\">3 Tage</label>\r\n    <input type=\"radio\" id=\"radio-week\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"604800000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-week\" title=\"Diese Woche\">7 Tage</label>\r\n    <input type=\"radio\" id=\"radio-2-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1209600000\" [(ngModel)]=\"activeTimeFilterValue\" />\r\n    <label class=\"custom-control-label\" for=\"radio-2-weeks\" title=\"Diese 2 Wochen\">2 Wochen</label>\r\n    <input type=\"radio\" id=\"radio-3-weeks\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"1814400000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-3-weeks\" title=\"Diese 3 Wochen\">3 Wochen</label>\r\n    <input type=\"radio\" id=\"radio-month\" name=\"radio-time-filter\" class=\"custom-control-input\" [value]=\"2629743000\" [(ngModel)]=\"activeTimeFilterValue\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-month\" title=\"Dieser Monat\">1 Monat</label>\r\n  </div>\r\n  <div class=\"choose-board\">\r\n    <input type=\"radio\" id=\"radio-commit-feed\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitFeed'\" [(ngModel)]=\"selectedBoard\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-commit-feed\" title=\"Alle Commits\">Alle Commits</label>\r\n    <input type=\"radio\" id=\"radio-commit-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectCommitLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-commit-leaderboard\" title=\"Beste Commits\">Beste Commits</label>\r\n    <input type=\"radio\" id=\"radio-user-leaderboard\" name=\"radio-board\" class=\"custom-control-input-2\" [value]=\"'selectUserLeaderboard'\" [(ngModel)]=\"selectedBoard\"/>\r\n    <label class=\"custom-control-label\" for=\"radio-user-leaderboard\" title=\"Beste User\">Beste User</label>\r\n  </div>\r\n</div>\r\n<div class=\"board-container\" *ngIf=\"ICommitElements.length > 1\r\n                                      && IUserElements\r\n                                      && activeTimeFilterValue\r\n                                      && selectedBoard\">\r\n  <div class=\"user-leader-board-container\" *ngIf=\"selectedBoard == 'selectUserLeaderboard' \">\r\n    <user-leader-board\r\n      [userElements]=\"IUserElements\"\r\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\r\n    </user-leader-board>\r\n  </div>\r\n  <div class=\"commit-leader-board-container\" *ngIf=\"selectedBoard == 'selectCommitLeaderboard' \">\r\n    <commit-leader-board\r\n      [commitElements]=\"ICommitElements\"\r\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\r\n    </commit-leader-board>\r\n  </div>\r\n  <div class=\"commit-feed-container\" *ngIf=\"selectedBoard == 'selectCommitFeed' \">\r\n    <commit-feed\r\n      [commitElements]=\"ICommitElements\"\r\n      [activeFilter]=\"activeTimeFilterValue\">Loading...\r\n    </commit-feed>\r\n  </div>\r\n</div>\r\n<ng-template #loadingScreen>\r\n  <loading-screen\r\n    [loadingIterator]=\"ICommitElements.length\"\r\n    [loadingElements]=\"commits.length-1\">\r\n  </loading-screen>\r\n</ng-template>\r\n\r\n"
 
 /***/ }),
 
@@ -584,7 +584,7 @@ var BoardViewComponent = /** @class */ (function () {
                 _this.metricService.loadDeltaTree(loginResultAccessToken, previousCommit, currentCommit, _this.metricNames).subscribe(function (node) {
                     deltaTree = node;
                     //console.log(deltaTree);
-                    tableRows = _this.prepareTableData(deltaTree);
+                    tableRows = _this.verarbeiteMetricData(deltaTree);
                     for (var j = 0; j < tableRows.length; j++) {
                         totalCommitPoints += tableRows[j].points;
                     }
@@ -610,7 +610,7 @@ var BoardViewComponent = /** @class */ (function () {
             }
         });
     };
-    BoardViewComponent.prototype.prepareTableData = function (foundElement) {
+    BoardViewComponent.prototype.verarbeiteMetricData = function (foundElement) {
         var rows = [];
         for (var _i = 0, _a = Object.keys(this.availableMetrics); _i < _a.length; _i++) {
             var key = _a[_i];
@@ -684,7 +684,6 @@ var BoardViewComponent = /** @class */ (function () {
     };
     BoardViewComponent.prototype.ngOnChanges = function () {
         if (this.selectedBoard) {
-            console.log("000000000000000000000000000000000000000");
             console.log(this.selectedBoard);
         }
     };
@@ -903,11 +902,11 @@ var CommitLeaderBoardComponent = /** @class */ (function () {
     }
     CommitLeaderBoardComponent.prototype.ngOnChanges = function () {
         this.formattedCommitElements = [];
-        this.commitElements.sort(function (a, b) { return b.totalPoints - a.totalPoints; });
         for (var i = 0; i < 15; i++) {
             if (this.commitElements[i]) {
                 if (this.commitElements[i].currentCommit.timestamp > (Date.now() - this.activeFilter)) {
                     this.formattedCommitElements.push(this.commitElements[i]);
+                    this.formattedCommitElements.sort(function (a, b) { return b.totalPoints - a.totalPoints; });
                 }
             }
         }
@@ -916,10 +915,6 @@ var CommitLeaderBoardComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Array)
     ], CommitLeaderBoardComponent.prototype, "commitElements", void 0);
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Array)
-    ], CommitLeaderBoardComponent.prototype, "userElements", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Number)
@@ -1003,6 +998,7 @@ var UserLeaderBoardComponent = /** @class */ (function () {
                 if (this.userElements[i].commitsPerUser[j].currentCommit.timestamp > (Date.now() - this.activeFilter)) {
                     totalPointsPerUser = totalPointsPerUser + this.userElements[i].commitsPerUser[j].totalPoints;
                     commitsInTimeframe++;
+                    averagePointsPerUser = Math.round(totalPointsPerUser / commitsInTimeframe * 100) / 100;
                     if (this.userElements[i].commitsPerUser[j].totalPoints > bestCommitPoints) {
                         bestCommitName = this.userElements[i].commitsPerUser[j].currentCommit.name;
                         bestCommitDate = this.userElements[i].commitsPerUser[j].date;
@@ -1021,13 +1017,9 @@ var UserLeaderBoardComponent = /** @class */ (function () {
                     bestCommitPoints: bestCommitPoints
                 });
             }
-            this.formattedUserElements = this.formattedUserElements.sort(function (a, b) { return b.averageUserPoints - a.averageUserPoints; });
+            this.formattedUserElements = this.formattedUserElements.sort(function (a, b) { return b.totalUserPoints - a.totalUserPoints; });
         }
     };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
-        __metadata("design:type", Array)
-    ], UserLeaderBoardComponent.prototype, "commitElements", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Array)
@@ -1116,7 +1108,7 @@ var GeneralViewComponent = /** @class */ (function () {
                 commits.filter(function (ICommit) { return new Date(ICommit.timestamp).toLocaleDateString() > new Date((Date.now() - 2629743000)).toLocaleDateString(); });
                 _this.commits = commits.sort(function (a, b) { return b.timestamp - a.timestamp; });
             });
-            _this.appMetrics = Array.from(new Set(_AppConfig__WEBPACK_IMPORTED_MODULE_4__["AppConfig"].METRIC_NAME_MAPPING));
+            _this.appMetrics = Array.from(new Set(_AppConfig__WEBPACK_IMPORTED_MODULE_4__["AppConfig"].METRICS));
             //this.metricService.loadAvailableMetrics().subscribe(metrics => this.availableMetrics = metrics);
         });
     };
@@ -1559,11 +1551,6 @@ var SetupService = /** @class */ (function () {
         var accessToken;
         this.authorizeUser().subscribe(function (loginResult) {
             accessToken = loginResult;
-            //console.log(accessToken);
-            /**this.createProject(accessToken);
-            this.addFilePattern(accessToken);
-            this.addAnalyzerConfig(accessToken);
-            this.addAnalyzingStrategy(accessToken);**/
         });
         return true;
     };
@@ -1580,61 +1567,6 @@ var SetupService = /** @class */ (function () {
             "username": _AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].USERNAME,
             "password": _AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].PASSWORD
         }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (result) { return result.accessToken; }));
-    };
-    SetupService.prototype.createProject = function (accessToken) {
-        console.log('creating project...');
-        return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects", {
-            "name": "budgeteer",
-            "vcsUrl": "https://github.com/adessoAG/budgeteer.git",
-            "startDate": [2018, 10, 1],
-            "endDate": [],
-        }, {
-            headers: { 'Authorization': accessToken }
-        });
-    };
-    SetupService.prototype.addFilePattern = function (accessToken) {
-        console.log('adding file pattern...');
-        return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects/8/files", {
-            "filePatterns": [{
-                    "pattern": "budgeteer-web-interface/src/main/java/**/*.java",
-                    "inclusionType": "INCLUDE",
-                    "fileSetType": "SOURCE"
-                },
-                {
-                    "pattern": "budgeteer-web-interface/src/main/java/src/main/java/**/*.html",
-                    "inclusionType": "INCLUDE",
-                    "fileSetType": "SOURCE"
-                }]
-        }, {
-            headers: { 'Authorization': accessToken }
-        });
-    };
-    SetupService.prototype.addAnalyzerConfig = function (accessToken) {
-        console.log('adding analyzing configs...');
-        var enabledAnalyzerPlugins = [
-            'org.wickedsource.coderadar.analyzer.loc.LocAnalyzerPlugin',
-            'org.wickedsource.coderadar.analyzer.checkstyle.CheckstyleSourceCodeFileAnalyzerPlugin'
-        ];
-        var promises = [];
-        for (var _i = 0, enabledAnalyzerPlugins_1 = enabledAnalyzerPlugins; _i < enabledAnalyzerPlugins_1.length; _i++) {
-            var pluginName = enabledAnalyzerPlugins_1[_i];
-            promises.push(this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects/8/analyzers", {
-                "analyzerName": pluginName,
-                "enabled": true
-            }, {
-                headers: { 'Authorization': accessToken }
-            }));
-        }
-    };
-    SetupService.prototype.addAnalyzingStrategy = function (accessToken) {
-        console.log('adding analyzing strategy...');
-        return this.http.post(_AppConfig__WEBPACK_IMPORTED_MODULE_3__["AppConfig"].BASE_URL + "/projects/8/analyzingJob", {
-            "fromDate": "1538352000000",
-            "active": true,
-            "rescan": true
-        }, {
-            headers: { 'Authorization': accessToken }
-        });
     };
     SetupService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
